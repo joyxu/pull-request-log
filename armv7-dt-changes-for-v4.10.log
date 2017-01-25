@@ -1,0 +1,27 @@
+The following changes since commit 1001354ca34179f3db924eb66672442a173147dc:
+
+  Linux 4.9-rc1 (2016-10-15 12:17:50 -0700)
+
+are available in the git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-armv7-soc-dt-for-4.10
+
+for you to fetch changes up to 3b23aabfcd48988179f7c6c2dde01f3356f68213:
+
+  ARM: dts: hisi-x5hd2: Remove skeleton.dtsi inclusion (2016-11-15 11:30:55 +0000)
+
+----------------------------------------------------------------
+ARM: DT: Hisilicon ARMv7 SoC DT updates for 4.10
+
+- Remove skeleton.dtsi inclusion for the Hip01, Hi3620 and Hix5hd2
+
+----------------------------------------------------------------
+Kefeng Wang (3):
+      ARM: dts: hip01: Remove skeleton.dtsi inclusion
+      ARM: dts: hi3620: Remove skeleton.dtsi inclusion
+      ARM: dts: hisi-x5hd2: Remove skeleton.dtsi inclusion
+
+ arch/arm/boot/dts/hi3620.dtsi     | 4 +++-
+ arch/arm/boot/dts/hip01.dtsi      | 2 --
+ arch/arm/boot/dts/hisi-x5hd2.dtsi | 4 +++-
+ 3 files changed, 6 insertions(+), 4 deletions(-)

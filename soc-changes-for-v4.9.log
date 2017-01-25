@@ -1,0 +1,56 @@
+The following changes since commit 29b4817d4018df78086157ea3a55c1d9424a7cfc:
+
+  Linux 4.8-rc1 (2016-08-07 18:18:00 -0700)
+
+are available in the git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-soc-dt-for-4.9
+
+for you to fetch changes up to 0f5d3ec5251066b1118ace0bf1369018de557bfb:
+
+  arm64: dts: hi6220: add sd-uhs- properties into dwmmc_1 (2016-09-02 09:36:50 +0100)
+
+----------------------------------------------------------------
+ARM64: DT: Hisilicon SoC DT updates for 4.9
+
+- Set UART1 clock frequency to 150MHz for higher baud rates on hikey
+- Add display subsystem, HDMI and cma nodes on hikey to support display
+- Add syscon-reboot-mode support on hikey
+- Add pstore support on hikey
+- Add resets and sd-uhs-sdr property dwmmc ndoe on hikey
+- Remove hip05_hns.dtsi since it can not be built without mbigenv1
+- Update system controller bingding document for hip05 and hip06
+- Add xge and sas support on hip06
+
+----------------------------------------------------------------
+Guodong Xu (3):
+      arm64: dts: hikey: extend default cma size to 128MB
+      arm64: dts: hi6220: add resets property into dwmmc nodes
+      arm64: dts: hi6220: add sd-uhs- properties into dwmmc_1
+
+John Stultz (2):
+      arm64: dts: hikey: Add hikey support for syscon-reboot-mode
+      arm64: dts: hikey: Add pstore support for HiKey
+
+Jorge Ramirez-Ortiz (1):
+      arm64: dts: set UART1 clock frequency to 150MHz
+
+Kefeng Wang (4):
+      arm64: dts: hip05: kill hip05_hns.dtsi
+      dt-bindings: hisilicon: Add Hip05 and Hip06 system controller support
+      arm64: dts: hip06: Append hns node
+      arm64: dts: hip06: Append sas node
+
+Xinliang Liu (2):
+      arm64: dts: Add display subsystem DT nodes for hi6220-hikey
+      arm64: dts: Add HDMI node for hi6220-hikey
+
+ .../bindings/arm/hisilicon/hisilicon.txt           |  39 ++-
+ arch/arm64/boot/dts/hisilicon/hi6220-hikey.dts     |  86 ++++-
+ arch/arm64/boot/dts/hisilicon/hi6220.dtsi          |  61 ++++
+ arch/arm64/boot/dts/hisilicon/hip05.dtsi           |   5 -
+ arch/arm64/boot/dts/hisilicon/hip05_hns.dtsi       | 180 ----------
+ arch/arm64/boot/dts/hisilicon/hip06-d03.dts        |  28 ++
+ arch/arm64/boot/dts/hisilicon/hip06.dtsi           | 365 +++++++++++++++++++++
+ 7 files changed, 566 insertions(+), 198 deletions(-)
+ delete mode 100644 arch/arm64/boot/dts/hisilicon/hip05_hns.dtsi

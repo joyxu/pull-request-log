@@ -1,0 +1,27 @@
+The following changes since commit a121103c922847ba5010819a3f250f1f7fc84ab8:
+
+  Linux 4.10-rc3 (2017-01-08 14:18:17 -0800)
+
+are available in the git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-defconfig-for-4.11
+
+for you to fetch changes up to 0f84832fb8f92b06f5e9b33d56836acb340dac53:
+
+  arm64: defconfig: Enable NUMA and NUMA_BALANCING (2017-01-20 16:14:26 +0000)
+
+----------------------------------------------------------------
+ARM64: hisilicon: defconfig updates for 4.11
+
+- Enable ARM_SMMU_V3 in the arm64 defconfig
+- Enable NUMA and NUMA_BALANCING in the arm64 defconfig
+
+----------------------------------------------------------------
+Kefeng Wang (1):
+      arm64: defconfig: Enable NUMA and NUMA_BALANCING
+
+Zhou Wang (1):
+      arm64: defconfig: enable SMMUv3 config
+
+ arch/arm64/configs/defconfig | 3 +++
+ 1 file changed, 3 insertions(+)

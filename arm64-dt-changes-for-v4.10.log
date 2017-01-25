@@ -1,0 +1,44 @@
+The following changes since commit 1001354ca34179f3db924eb66672442a173147dc:
+
+  Linux 4.9-rc1 (2016-10-15 12:17:50 -0700)
+
+are available in the git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-4.10
+
+for you to fetch changes up to 85f5bd9e771349833602ccdd39b65613ecd11fd1:
+
+  arm64: dts: hisi: add refclk node to hip06 dts files for SAS (2016-11-15 10:58:41 +0000)
+
+----------------------------------------------------------------
+ARM64: DT: Hisilicon SoC DT updates for 4.10
+
+- Correct the hardware pin number of the usb node on the Hip06
+- Add the Hisilicon Hip07 D05 board dts binding
+- Add the initial dts for the Hip07 D05 board
+- Fix the warning for the node without reg propery on the Hip06
+- Fix the sas am max transmissions quirk property on the Hip06
+- Disable the sas0 and sas2 on D03 board
+- Add refclk node for SAS on the Hip06
+
+----------------------------------------------------------------
+John Garry (3):
+      arm64: dts: hisi: fix hip06 sas am-max-trans quirk
+      arm64: dts: hisi: disable sas0 and sas2 for d03
+      arm64: dts: hisi: add refclk node to hip06 dts files for SAS
+
+Kefeng Wang (4):
+      arm64: dts: hip06: Correct hardware pin number of usb node
+      Documentation: arm64: Add Hisilicon Hip07 D05 dts binding
+      arm64: dts: hisilicon: Add initial dts for Hip07 D05 board
+      arm64: dts: hip06: Fix no reg property warning
+
+ .../bindings/arm/hisilicon/hisilicon.txt           |    4 +
+ arch/arm64/boot/dts/hisilicon/Makefile             |    1 +
+ arch/arm64/boot/dts/hisilicon/hip06-d03.dts        |    8 -
+ arch/arm64/boot/dts/hisilicon/hip06.dtsi           |   23 +-
+ arch/arm64/boot/dts/hisilicon/hip07-d05.dts        |   66 ++
+ arch/arm64/boot/dts/hisilicon/hip07.dtsi           | 1059 ++++++++++++++++++++
+ 6 files changed, 1146 insertions(+), 15 deletions(-)
+ create mode 100644 arch/arm64/boot/dts/hisilicon/hip07-d05.dts
+ create mode 100644 arch/arm64/boot/dts/hisilicon/hip07.dtsi

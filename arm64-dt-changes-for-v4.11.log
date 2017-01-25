@@ -1,0 +1,33 @@
+The following changes since commit a121103c922847ba5010819a3f250f1f7fc84ab8:
+
+  Linux 4.10-rc3 (2017-01-08 14:18:17 -0800)
+
+are available in the git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-4.11
+
+for you to fetch changes up to 35ca8168133c9c035e32eff10cce94b8e8c279b3:
+
+  arm64: dts: Add dts files for Hisilicon Hi3660 SoC (2017-01-25 16:08:29 +0000)
+
+----------------------------------------------------------------
+ARM64: DT: Hisilicon SoC DT updates for 4.11
+
+- Add binding for Hi3660 SoC and HiKey960 Board
+- Add binding for ARM Cortex-A73
+- Add dts files for HiKey960 development board
+
+----------------------------------------------------------------
+Chen Feng (3):
+      document: dt: add binding for Hi3660 SoC
+      dt-bindings: Add a support cpu type for cortex-a73
+      arm64: dts: Add dts files for Hisilicon Hi3660 SoC
+
+ Documentation/devicetree/bindings/arm/cpus.txt     |   1 +
+ .../bindings/arm/hisilicon/hisilicon.txt           |   4 +
+ arch/arm64/boot/dts/hisilicon/Makefile             |   1 +
+ arch/arm64/boot/dts/hisilicon/hi3660-hikey960.dts  |  33 +++++
+ arch/arm64/boot/dts/hisilicon/hi3660.dtsi          | 160 +++++++++++++++++++++
+ 5 files changed, 199 insertions(+)
+ create mode 100644 arch/arm64/boot/dts/hisilicon/hi3660-hikey960.dts
+ create mode 100644 arch/arm64/boot/dts/hisilicon/hi3660.dtsi
