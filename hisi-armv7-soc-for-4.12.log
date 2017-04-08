@@ -1,0 +1,23 @@
+The following changes since commit c1ae3cfa0e89fa1a7ecc4c99031f5e9ae99d9201:
+
+  Linux 4.11-rc1 (2017-03-05 12:59:56 -0800)
+
+are available in the git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-armv7-soc-for-4.12
+
+for you to fetch changes up to f147140c7f0350d363c10aeb51b78b65b2425266:
+
+  ARM: hisi: fix error return code in hip04_smp_init() (2017-03-28 15:30:54 +0100)
+
+----------------------------------------------------------------
+ARM: mach-hisi: Hisilicon SoC updates for 4.12
+
+- Fix the error return code in hip04_smp_init
+
+----------------------------------------------------------------
+Wei Yongjun (1):
+      ARM: hisi: fix error return code in hip04_smp_init()
+
+ arch/arm/mach-hisi/platmcpm.c | 2 ++
+ 1 file changed, 2 insertions(+)
