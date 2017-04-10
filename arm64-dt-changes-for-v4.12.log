@@ -6,9 +6,9 @@ are available in the git repository at:
 
   git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-4.12
 
-for you to fetch changes up to 279da3ef28595bdb277280dfd026ca20b8ad98fe:
+for you to fetch changes up to d4e1eaeee56894f45d0093f9d432be0c868f7c4c:
 
-  arm64: dts: hisi: add pinctrl dtsi file for HiKey960 development board (2017-04-08 13:43:55 +0800)
+  arm64: dts: hisi: add pinctrl dtsi file for HiKey960 development board (2017-04-10 23:34:26 +0800)
 
 ----------------------------------------------------------------
 ARM64: DT: Hisilicon SoC DT updates for 4.12
@@ -37,7 +37,7 @@ Wei Xu (5):
       arm64: dts: hisi: add network related nodes for the hip07 SoC
       arm64: dts: hisi: add RoCE nodes for the hip07 SoC
       arm64: dts: hisi: add SAS nodes for the hip07 SoC
-      arm64: dts: hisi: enalbe the NIC and SAS for the hip07-d05 board
+      arm64: dts: hisi: enable the NIC and SAS for the hip07-d05 board
 
  .../bindings/arm/hisilicon/hisilicon.txt           |   8 +
  arch/arm64/boot/dts/hisilicon/Makefile             |   1 +
