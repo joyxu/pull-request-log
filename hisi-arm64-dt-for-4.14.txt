@@ -1,0 +1,57 @@
+The following changes since commit 5771a8c08880cdca3bfb4a3fc6d309d6bba20877:
+
+  Linux v4.13-rc1 (2017-07-15 15:22:10 -0700)
+
+are available in the git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-4.14
+
+for you to fetch changes up to a0a450ead7309e4852ae1e442790c710e829b0d8:
+
+  arm64: dts: hi3660: enable watchdog (2017-08-14 15:42:38 +0100)
+
+----------------------------------------------------------------
+ARM64: DT: Hisilicon SoC DT updates for 4.14
+
+- Add PCIe node for hip07
+- Add acpu_sctrl node and refine the usb tx fifo size for hi6220
+- Add cpu idle states, L2 cache, PMU, OP-TEE, reboot, pstore,
+  k3-dma and watchdog nodes for hi3660 and hikey960
+- Update mmc and bluetooth nodes for hi3660 and hikey960
+
+----------------------------------------------------------------
+Guodong Xu (4):
+      arm64: dts: hikey960: Add support for syscon-reboot-mode
+      arm64: dts: hikey960: Add pstore support
+      arm64: dts: hi3660: Reset the mmc hosts
+      arm64: dts: hikey960: change bluetooth uart max-speed to 3mbps
+
+Leo Yan (3):
+      arm64: dts: hi3660: enable idle states
+      arm64: dts: hi3660: add L2 cache topology
+      arm64: dts: hi3660: enable watchdog
+
+Shawn Guo (1):
+      arm64: dts: hi6220: improve g-tx-fifo-size setting for usb device
+
+Victor Chong (1):
+      arm64: dts: hikey960: Add optee node
+
+Wang Ruyi (1):
+      arm64: dts: hi3660: add bindings for DMA
+
+YiPing Xu (1):
+      arm64: dts: hi3660: add pmu dt node for hi3660
+
+Zhangfei Gao (1):
+      arm64: dts: hi6220: add acpu_sctrl
+
+Zhou Wang (1):
+      arm64: dts: hisi: add PCIe host controller node for hip07 SoC
+
+ arch/arm64/boot/dts/hisilicon/hi3660-hikey960.dts |  37 +++++-
+ arch/arm64/boot/dts/hisilicon/hi3660.dtsi         | 130 ++++++++++++++++++++++
+ arch/arm64/boot/dts/hisilicon/hi6220.dtsi         |   9 +-
+ arch/arm64/boot/dts/hisilicon/hip07-d05.dts       |   4 +
+ arch/arm64/boot/dts/hisilicon/hip07.dtsi          |  22 ++++
+ 5 files changed, 200 insertions(+), 2 deletions(-)
