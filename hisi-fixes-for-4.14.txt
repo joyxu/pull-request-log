@@ -1,0 +1,24 @@
+The following changes since commit 5771a8c08880cdca3bfb4a3fc6d309d6bba20877:
+
+  Linux v4.13-rc1 (2017-07-15 15:22:10 -0700)
+
+are available in the git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-fixes-for-4.14
+
+for you to fetch changes up to d2057bbb79aad0e0f20112edd7b6599f06101e64:
+
+  ARM: hisi: Fix typo in comment (2017-08-16 10:40:46 +0100)
+
+----------------------------------------------------------------
+ARM: hisi fixes for 4.14
+
+- Fix the comment typo of the machine code "0xe51ff004"
+  to avoid confusion.
+
+----------------------------------------------------------------
+Yunzhi Li (1):
+      ARM: hisi: Fix typo in comment
+
+ arch/arm/mach-hisi/platsmp.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
