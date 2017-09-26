@@ -1,0 +1,107 @@
+The following changes since commit 67e7de2625dafe0c3bd210e48d3c3530683242d8:
+
+  {temphack} fix allmodconfig issue for CI (2017-09-18 23:08:53 +0800)
+
+are available in the git repository at:
+
+  git@github.com:hisilicon/kernel-dev.git topic-virt-4.14.0
+
+for you to fetch changes up to 2c0c952fd7288e46fa3733126b3fe151cc91a8e8:
+
+  {fromlist v8} iommu/arm-smmu-v3:Enable ACPI based HiSilicon erratum 161010801 (2017-09-26 16:45:40 +0100)
+
+----------------------------------------------------------------
+Eric Auger (8):
+      {fromlist v2} VFIO: platform: Differentiate auto-masking from user masking
+      {fromlist v2} VFIO: platform: Introduce direct EOI interrupt handler
+      {fromlist v2} VFIO: platform: Direct EOI irq bypass for ARM/ARM64
+      {fromlist v2} KVM: arm/arm64: vgic: restructure kvm_vgic_(un)map_phys_irq
+      {fromlist v2} KVM: arm/arm64: vgic: Handle mapped level sensitive SPIs
+      {fromlist v2} KVM: arm/arm64: vgic: Implement forwarding setting
+      {fromlist v2} virt: irqbypass: Add a type field to the irqbypass producer
+      {fromlist v2} KVM: arm/arm64: register DEOI irq bypass consumer on ARM/ARM64
+
+John Garry (2):
+      {fromlist v8} Doc: iommu/arm-smmu-v3: Add workaround for HiSilicon erratum 161010801
+      {fromlist v8} iommu/of: Add msi address regions reservation helper
+
+Marc Zyngier (28):
+      {frommaintainer v4} irqchip/gic-v3-its: Add post-mortem info on command timeout
+      {frommaintainer v4} irqchip/gic-v3-its: Pass its_node pointer to each command builder
+      {frommaintainer v4} irqchip/gic-v3-its: Workaround HiSilicon Hip07 redistributor addressing
+      {frommaintainer v4} KVM: arm: Select ARM_GIC_V3 and ARM_GIC_V3_ITS
+      {frommaintainer v4} KVM: arm/arm64: vgic: Move kvm_vgic_destroy call around
+      {frommaintainer v4} KVM: arm/arm64: vITS: Add MSI translation helpers
+      {frommaintainer v4} KVM: arm/arm64: vITS: Add a helper to update the affinity of an LPI
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Add property field and per-VM predicate
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Add init/teardown of the per-VM vPE irq domain
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Wire mapping/unmapping of VLPIs in VFIO irq bypass
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Handle INT command applied to a VLPI
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Unmap VLPI when freeing an LPI
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Propagate affinity changes to the physical ITS
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Handle CLEAR applied to a VLPI
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Handle MOVALL applied to a vPE
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Propagate property updates to VLPIs
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Handle INVALL applied to a vPE
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Propagate VLPI properties at map time
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Use pending_last as a scheduling hint
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Add doorbell interrupt handling
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Use the doorbell interrupt as an unblocking source
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Hook vPE scheduling into vgic flush/sync
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Enable virtual cpuif if VLPIs can be delivered
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Prevent a VM using GICv4 from being saved
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Enable VLPI support
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Prevent heterogenous systems from using GICv4
+      {frommaintainer v4} KVM: arm/arm64: GICv4: Theory of operations
+      {frommaintainer v4} fixup! irqchip/gic-v3-its: Workaround HiSilicon Hip07 redistributor addressing
+
+Shameer Kolothum (3):
+      {fromlist v8} ACPI/IORT: Add msi address regions reservation helper
+      {fromlist v8} iommu/dma: Add a helper function to reserve HW MSI address regions for IOMMU drivers
+      {fromlist v8} iommu/arm-smmu-v3:Enable ACPI based HiSilicon erratum 161010801
+
+Sherlock Wang (1):
+      {temphack} PCI: Add hisi acs quirk
+
+Wei Xu (1):
+      {temphack} KVM: arm/arm64: GICv4: use vmapp to remap insteading of vmovp on hip06
+
+ Documentation/admin-guide/kernel-parameters.txt    |   4 +
+ Documentation/arm64/silicon-errata.txt             |   2 +
+ .../devicetree/bindings/iommu/arm,smmu-v3.txt      |   7 +-
+ arch/arm/kvm/Kconfig                               |   5 +
+ arch/arm/kvm/Makefile                              |   1 +
+ arch/arm64/Kconfig                                 |   9 +
+ arch/arm64/kvm/Kconfig                             |   3 +
+ arch/arm64/kvm/Makefile                            |   1 +
+ drivers/acpi/arm64/iort.c                          |  96 +++++-
+ drivers/iommu/arm-smmu-v3.c                        |  41 ++-
+ drivers/iommu/dma-iommu.c                          |  19 ++
+ drivers/iommu/of_iommu.c                           |  85 +++++
+ drivers/irqchip/irq-gic-v3-its.c                   | 108 ++++--
+ drivers/pci/quirks.c                               |  10 +
+ drivers/vfio/pci/vfio_pci_intrs.c                  |   1 +
+ drivers/vfio/platform/Kconfig                      |   5 +
+ drivers/vfio/platform/Makefile                     |   2 +-
+ drivers/vfio/platform/vfio_platform_irq.c          |  60 +++-
+ drivers/vfio/platform/vfio_platform_irq_bypass.c   | 119 +++++++
+ drivers/vfio/platform/vfio_platform_private.h      |  30 +-
+ include/kvm/arm_vgic.h                             |  46 ++-
+ include/linux/acpi_iort.h                          |   7 +-
+ include/linux/dma-iommu.h                          |   7 +
+ include/linux/irqbypass.h                          |   7 +
+ include/linux/irqchip/arm-gic-v3.h                 |   2 +
+ include/linux/of_iommu.h                           |  10 +
+ virt/kvm/arm/arch_timer.c                          |  24 +-
+ virt/kvm/arm/arm.c                                 |  65 +++-
+ virt/kvm/arm/hyp/vgic-v3-sr.c                      |   9 +-
+ virt/kvm/arm/vgic/vgic-init.c                      |   9 +
+ virt/kvm/arm/vgic/vgic-its.c                       | 195 +++++++----
+ virt/kvm/arm/vgic/vgic-mmio-v3.c                   |   5 +
+ virt/kvm/arm/vgic/vgic-v3.c                        |  39 ++-
+ virt/kvm/arm/vgic/vgic-v4.c                        | 361 +++++++++++++++++++++
+ virt/kvm/arm/vgic/vgic.c                           | 171 +++++++++-
+ virt/kvm/arm/vgic/vgic.h                           |  17 +-
+ 36 files changed, 1408 insertions(+), 174 deletions(-)
+ create mode 100644 drivers/vfio/platform/vfio_platform_irq_bypass.c
+ create mode 100644 virt/kvm/arm/vgic/vgic-v4.c
