@@ -15,8 +15,8 @@ ARM64: DT: Hisilicon SoC DT updates for 4.15
 
 - Add CoreSight related nodes for hi6220
 - Add GPIO line names for hikey960
-- Rectify the GPIO line names of the Poplar board to keep consisitency
-- Add thermal sensor binding doc and dts nodes for hi3660
+- Rectify the GPIO line names of the Poplar board to keep consistency
+- Add thermal sensor binding doc and dt nodes for hi3660
 
 ----------------------------------------------------------------
 Kevin Wangtao (2):
