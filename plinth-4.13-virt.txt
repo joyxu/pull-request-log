@@ -4,7 +4,7 @@ The following changes since commit 1aba97c653385edb43c296fc0002cf7d5cbebb2d:
 
 are available in the git repository at:
 
-  git://github.com/hisilicon/kernel-dev.git topic-virt-4.13.1
+  git@github.com:hisilicon/kernel-dev.git topic-virt-4.13.1
 
 for you to fetch changes up to 5b64fe7b1d97fc05d9b18b06a4a178c999ff228c:
 

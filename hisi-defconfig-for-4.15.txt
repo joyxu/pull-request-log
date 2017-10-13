@@ -1,0 +1,23 @@
+The following changes since commit 2bd6bf03f4c1c59381d62c61d03f6cc3fe71f66e:
+
+  Linux 4.14-rc1 (2017-09-16 15:47:51 -0700)
+
+are available in the git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-defconfig-for-4.15
+
+for you to fetch changes up to f9a3da591d4bf5ad28eb9ffabc823dee9e4254f4:
+
+  arm64: defconfig: Enable hisilicon hibmc drm driver (2017-10-10 15:17:41 +0100)
+
+----------------------------------------------------------------
+ARM64: hisilicon: defconfig updates for 4.15
+
+- Enable DRM_HISI_HIBMC for the D03/D05 board
+
+----------------------------------------------------------------
+Kefeng Wang (1):
+      arm64: defconfig: Enable hisilicon hibmc drm driver
+
+ arch/arm64/configs/defconfig | 1 +
+ 1 file changed, 1 insertion(+)
