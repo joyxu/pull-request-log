@@ -1,0 +1,36 @@
+The following changes since commit 8ff1725b0b9320ed0d575d467260a8ada6d03f20:
+
+  {fromlist v4} arm64/ras: decode IMPLEMENTATION DEFINED for sei (2017-12-26 14:14:09 +0800)
+
+are available in the git repository at:
+
+  git@github.com:hisilicon/kernel-dev.git topic-virt-4.15.1
+
+for you to fetch changes up to 4a240c8eb026d2bcd2e7e19e2b6954fcb696072f:
+
+  {fromlist v2} virt: irqbypass: Add a type field to the irqbypass producer (2018-01-03 15:28:01 +0000)
+
+----------------------------------------------------------------
+Eric Auger (6):
+      {fromlist v2} VFIO: platform: Differentiate auto-masking from user masking
+      {fromlist v2} VFIO: platform: Introduce direct EOI interrupt handler
+      {fromlist v2} VFIO: platform: Direct EOI irq bypass for ARM/ARM64
+      {fromlist v2} KVM: arm/arm64: vgic: Handle mapped level sensitive SPIs
+      {fromlist v2} KVM: arm/arm64: vgic: Implement forwarding setting
+      {fromlist v2} virt: irqbypass: Add a type field to the irqbypass producer
+
+Wei Xu (1):
+      {temphack} arm64: plinth-config: add virt/qemu realted configs
+
+ arch/arm64/configs/plinth-config                 |   8 ++
+ drivers/vfio/pci/vfio_pci_intrs.c                |   1 +
+ drivers/vfio/platform/Kconfig                    |   5 +
+ drivers/vfio/platform/Makefile                   |   2 +-
+ drivers/vfio/platform/vfio_platform_irq.c        |  60 +++++++++---
+ drivers/vfio/platform/vfio_platform_irq_bypass.c | 119 +++++++++++++++++++++++
+ drivers/vfio/platform/vfio_platform_private.h    |  30 +++++-
+ include/linux/irqbypass.h                        |   7 ++
+ virt/kvm/arm/vgic/vgic.c                         | 104 +++++++++++++++++++-
+ virt/kvm/arm/vgic/vgic.h                         |   7 +-
+ 10 files changed, 323 insertions(+), 20 deletions(-)
+ create mode 100644 drivers/vfio/platform/vfio_platform_irq_bypass.c
