@@ -1,0 +1,37 @@
+From c20d82a6386f3baf5fccadd28f28c318c0460044 Mon Sep 17 00:00:00 2001
+From: Wei Xu <xuwei5@hisilicon.com>
+Date: Fri, 26 Jan 2018 14:11:07 +0000
+Subject: [PATCH] pl011: do not put into fifo before enabled the interruption.
+
+If the user pressed some keys in the console during the guest booting,
+the console will be hanged after entering the shell.
+Because in the above case the pl011_can_receive will return 0 that
+the pl011_receive will not be called. That means no interruption will
+be injected in to the kernel and the pl011 state could not be driven
+further.
+
+This patch fixed that issue by checking the interruption is enabled or
+not before putting into the fifo.
+
+Signed-off-by: Wei Xu <xuwei5@hisilicon.com>
+---
+ hw/char/pl011.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/hw/char/pl011.c b/hw/char/pl011.c
+index 2aa277fc4f..2a5225485c 100644
+--- a/hw/char/pl011.c
++++ b/hw/char/pl011.c
+@@ -228,7 +228,8 @@ static int pl011_can_receive(void *opaque)
+ {
+     PL011State *s = (PL011State *)opaque;
+     int r;
+-
++    if (!s->int_enabled)
++	return 0;
+     if (s->lcr & 0x10) {
+         r = s->read_count < 16;
+     } else {
+-- 
+2.11.0
+
