@@ -1,4 +1,4 @@
-From c20d82a6386f3baf5fccadd28f28c318c0460044 Mon Sep 17 00:00:00 2001
+From 6fa0ee34bc612fe9b8802e19959c40ec7ddaafc5 Mon Sep 17 00:00:00 2001
 From: Wei Xu <xuwei5@hisilicon.com>
 Date: Fri, 26 Jan 2018 14:11:07 +0000
 Subject: [PATCH] pl011: do not put into fifo before enabled the interruption.
@@ -15,18 +15,17 @@ not before putting into the fifo.
 
 Signed-off-by: Wei Xu <xuwei5@hisilicon.com>
 ---
- hw/char/pl011.c | 3 ++-
- 1 file changed, 2 insertions(+), 1 deletion(-)
+ hw/char/pl011.c | 2 ++
+ 1 file changed, 2 insertions(+)
 
 diff --git a/hw/char/pl011.c b/hw/char/pl011.c
-index 2aa277fc4f..2a5225485c 100644
+index 2aa277fc4f..6296de9527 100644
 --- a/hw/char/pl011.c
 +++ b/hw/char/pl011.c
-@@ -228,7 +228,8 @@ static int pl011_can_receive(void *opaque)
- {
+@@ -229,6 +229,8 @@ static int pl011_can_receive(void *opaque)
      PL011State *s = (PL011State *)opaque;
      int r;
--
+ 
 +    if (!s->int_enabled)
 +	return 0;
      if (s->lcr & 0x10) {
