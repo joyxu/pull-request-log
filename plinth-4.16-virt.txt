@@ -1,0 +1,61 @@
+The following changes since commit 5a31c9ee36ffc3428a469904adce8941c4c34f09:
+
+  {fromlist v5} arm64: toplogy: add cluster_id and cluster_sibling in struct cpu_topology (2018-02-12 17:47:58 +0800)
+
+are available in the git repository at:
+
+  git@github.com:hisilicon/kernel-dev.git topic-virt-4.16
+
+for you to fetch changes up to c9475de02e4ad9797fd9ff97265b32460fd6790b:
+
+  {fromlist v2} tty: pl011: Avoid spuriously stuck-off interrupts (2018-02-27 16:17:58 +0000)
+
+----------------------------------------------------------------
+Dave Martin (1):
+      {frommaintainer} arm64: KVM: Move CPU ID reg trap setup off the world switch path
+
+Dave P Martin (1):
+      {fromlist v2} tty: pl011: Avoid spuriously stuck-off interrupts
+
+Eric Auger (6):
+      {fromlist v2} VFIO: platform: Differentiate auto-masking from user masking
+      {fromlist v2} VFIO: platform: Introduce direct EOI interrupt handler
+      {fromlist v2} VFIO: platform: Direct EOI irq bypass for ARM/ARM64
+      {fromlist v2} KVM: arm/arm64: vgic: Handle mapped level sensitive SPIs
+      {fromlist v2} KVM: arm/arm64: vgic: Implement forwarding setting
+      {fromlist v2} virt: irqbypass: Add a type field to the irqbypass producer
+
+Jérémy Fanguède (2):
+      {frommaintainer} KVM: arm64: Enable the EL1 physical timer for AArch32 guests
+      {frommaintainer} KVM: arm: Enable emulation of the physical timer
+
+Mark Rutland (1):
+      {frommaintainer} arm64/kvm: Prohibit guest LOR accesses
+
+Shanker Donthineni (1):
+      {frommaintainer} KVM: arm/arm64: No need to zero CNTVOFF in kvm_timer_vcpu_put() for VHE
+
+Wei Xu (1):
+      {temphack} arm64: plinth-config: add virt/qemu realted configs
+
+ arch/arm/kvm/coproc.c                            |  61 ++++++++++++
+ arch/arm64/configs/common-config                 |  16 +++
+ arch/arm64/include/asm/kvm_arm.h                 |   4 +-
+ arch/arm64/include/asm/kvm_emulate.h             |   8 ++
+ arch/arm64/include/asm/sysreg.h                  |   6 ++
+ arch/arm64/kernel/head.S                         |   7 ++
+ arch/arm64/kvm/hyp/switch.c                      |   4 -
+ arch/arm64/kvm/sys_regs.c                        |  26 +++++
+ drivers/tty/serial/amba-pl011.c                  |  11 +--
+ drivers/vfio/pci/vfio_pci_intrs.c                |   1 +
+ drivers/vfio/platform/Kconfig                    |   5 +
+ drivers/vfio/platform/Makefile                   |   2 +-
+ drivers/vfio/platform/vfio_platform_irq.c        |  60 +++++++++---
+ drivers/vfio/platform/vfio_platform_irq_bypass.c | 119 +++++++++++++++++++++++
+ drivers/vfio/platform/vfio_platform_private.h    |  30 +++++-
+ include/linux/irqbypass.h                        |   7 ++
+ virt/kvm/arm/arch_timer.c                        |   6 +-
+ virt/kvm/arm/vgic/vgic.c                         | 104 +++++++++++++++++++-
+ virt/kvm/arm/vgic/vgic.h                         |   7 +-
+ 19 files changed, 449 insertions(+), 35 deletions(-)
+ create mode 100644 drivers/vfio/platform/vfio_platform_irq_bypass.c
