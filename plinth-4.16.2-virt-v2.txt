@@ -1,0 +1,43 @@
+The following changes since commit 3208fc0b7565b6ad45ba58aa1988c5cfeb3c6df4:
+
+  {fromtree} RDMA/hns: Update assignment method for owner field of send wqe (2018-05-15 19:13:20 +0800)
+
+are available in the Git repository at:
+
+  git@github.com:hisilicon/kernel-dev.git topic-virt-4.16.2-v2
+
+for you to fetch changes up to da518ba084aa3347f860b22da09930547e8df4bd:
+
+  {topost} arm64: hisi: Disable KPTI on hisilicon TAISHAN SoC. (2018-05-24 12:11:49 +0100)
+
+----------------------------------------------------------------
+Ard Biesheuvel (1):
+      {frommainline} arm64: mm: fix thinko in non-global page table attribute check
+
+John Garry (1):
+      {topost} scsi: hisi_sas: Use static Scsi host template per module
+
+Peng Li (2):
+      Revert "{topost} net: hns3: add support for hns3_driver.sriov_configure"
+      {topost} net: hns3: Add support of .sriov_configure in HNS3 driver
+
+Wei Hu (Xavier) (1):
+      {topost} RDMA/hns: Fix the illegal memory operation when cross page
+
+Wei Xu (1):
+      {topost} arm64: hisi: Disable KPTI on hisilicon TAISHAN SoC.
+
+chenxiang (1):
+      {topost} scsi: hisi_sas: relocate some code and do some cleanup
+
+ arch/arm64/kernel/cpufeature.c                  |  1 +
+ arch/arm64/mm/mmu.c                             |  8 +--
+ drivers/infiniband/hw/hns/hns_roce_hw_v2.c      | 70 ++++++++++++++++++-------
+ drivers/infiniband/hw/hns/hns_roce_hw_v2.h      |  1 +
+ drivers/net/ethernet/hisilicon/hns3/hns3_enet.c |  4 +-
+ drivers/scsi/hisi_sas/hisi_sas.h                | 17 +++---
+ drivers/scsi/hisi_sas/hisi_sas_main.c           | 56 ++++++--------------
+ drivers/scsi/hisi_sas/hisi_sas_v1_hw.c          | 55 +++++++++----------
+ drivers/scsi/hisi_sas/hisi_sas_v2_hw.c          | 55 +++++++++----------
+ drivers/scsi/hisi_sas/hisi_sas_v3_hw.c          | 56 +++++++++-----------
+ 10 files changed, 164 insertions(+), 159 deletions(-)
