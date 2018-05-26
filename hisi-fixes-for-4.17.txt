@@ -1,0 +1,29 @@
+The following changes since commit 60cc43fc888428bb2f18f08997432d426a243338:
+
+  Linux 4.17-rc1 (2018-04-15 18:24:20 -0700)
+
+are available in the git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-fixes-for-4.17
+
+for you to fetch changes up to 7734370471922ad8b1d9077c876bb0774059f807:
+
+  arm64: dts: hisilicon: Add missing cooling device properties for CPUs (2018-05-26 18:15:27 +0100)
+
+----------------------------------------------------------------
+ARM64: hisi fixes for 4.17
+
+- Remove eMMC max-frequency property to fix eMMC corruption on hikey board
+- Add missing cooling related properties to avoid falling apart when the
+  CPUs are brought oneline in a different order on hi6220 SoC
+
+----------------------------------------------------------------
+John Stultz (1):
+      arm64: dts: hikey: Fix eMMC corruption regression
+
+Viresh Kumar (1):
+      arm64: dts: hisilicon: Add missing cooling device properties for CPUs
+
+ arch/arm64/boot/dts/hisilicon/hi6220-hikey.dts |  1 -
+ arch/arm64/boot/dts/hisilicon/hi6220.dtsi      | 16 +++++++++++++++-
+ 2 files changed, 15 insertions(+), 2 deletions(-)
