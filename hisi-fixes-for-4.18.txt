@@ -1,0 +1,26 @@
+The following changes since commit ce397d215ccd07b8ae3f71db689aedb85d56ab40:
+
+  Linux 4.18-rc1 (2018-06-17 08:04:49 +0900)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-fixes-for-4.18
+
+for you to fetch changes up to a30449eb3ac908f26b4bc963a58039a5f2725ffa:
+
+  arm64: dts: hikey960: Define wl1837 power capabilities (2018-06-28 17:07:44 +0100)
+
+----------------------------------------------------------------
+ARM64: hisi fixes for 4.18
+
+- Added power capobilities for the mmc host controller on the
+  hikey and hikey960 boards to avoid broken wifi.
+
+----------------------------------------------------------------
+oscardagrach (2):
+      arm64: dts: hikey: Define wl1835 power capabilities
+      arm64: dts: hikey960: Define wl1837 power capabilities
+
+ arch/arm64/boot/dts/hisilicon/hi3660-hikey960.dts | 2 ++
+ arch/arm64/boot/dts/hisilicon/hi6220-hikey.dts    | 2 ++
+ 2 files changed, 4 insertions(+)
