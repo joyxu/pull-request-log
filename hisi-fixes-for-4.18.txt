@@ -2,7 +2,7 @@ The following changes since commit ce397d215ccd07b8ae3f71db689aedb85d56ab40:
 
   Linux 4.18-rc1 (2018-06-17 08:04:49 +0900)
 
-are available in the Git repository at:
+are available in the git repository at:
 
   git://github.com/hisilicon/linux-hisi.git tags/hisi-fixes-for-4.18
 
@@ -13,7 +13,7 @@ for you to fetch changes up to a30449eb3ac908f26b4bc963a58039a5f2725ffa:
 ----------------------------------------------------------------
 ARM64: hisi fixes for 4.18
 
-- Added power capobilities for the mmc host controller on the
+- Added power capabilities for the mmc host controller on the
   hikey and hikey960 boards to avoid broken wifi.
 
 ----------------------------------------------------------------
