@@ -1,0 +1,46 @@
+The following changes since commit a30449eb3ac908f26b4bc963a58039a5f2725ffa:
+
+  arm64: dts: hikey960: Define wl1837 power capabilities (2018-06-28 17:07:44 +0100)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-4.19
+
+for you to fetch changes up to 168124aa0b430dce963d9a9e3dba44cb81a8159e:
+
+  arm64: dts: hi6220: Add all CPUs in cooling maps (2018-07-17 13:58:17 +0100)
+
+----------------------------------------------------------------
+ARM64: DT: Hisilicon SoC DT updates for 4.19
+
+- Tidy up MMC properties for hi3660
+- Remove keep-power-in-suspend on hikey and hikey960 to
+  avoid keeping wifi power during suspend and let the
+  user enable it if required
+- Update idle states for hikey960
+- Add missing cooling device properties for cpus on hi6220
+- Update thermal dt binding to allow multiple devices
+  to share cooling map
+- Add all cpus in the cooling maps for hi6220
+
+----------------------------------------------------------------
+Vincent Guittot (1):
+      arm64: hikey960: update idle-states
+
+Viresh Kumar (3):
+      arm64: dts: hisilicon: Add missing cooling device properties for CPUs
+      dt-bindings: thermal: Allow multiple devices to share cooling map
+      arm64: dts: hi6220: Add all CPUs in cooling maps
+
+oscardagrach (4):
+      arm64: dts: hikey960: Remove deprecated MMC properties
+      arm64: dts: hikey960: Clean up MMC properties and move to proper file
+      arm64: dts: hikey960: Remove keep-power-in-suspend property
+      arm64: dts: hikey: Remove keep-power-in-suspend property
+
+ .../devicetree/bindings/thermal/thermal.txt        | 11 +--
+ arch/arm64/boot/dts/hisilicon/hi3660-hikey960.dts  | 26 +++++--
+ arch/arm64/boot/dts/hisilicon/hi3660.dtsi          | 79 +++++++++-------------
+ arch/arm64/boot/dts/hisilicon/hi6220-hikey.dts     |  1 -
+ arch/arm64/boot/dts/hisilicon/hi6220.dtsi          | 25 ++++++-
+ 5 files changed, 78 insertions(+), 64 deletions(-)
