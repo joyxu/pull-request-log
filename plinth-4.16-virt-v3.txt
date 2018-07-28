@@ -1,0 +1,18 @@
+The following changes since commit 138f084d0dbf447d29f905ce7bf8f3bfeb4f4ab4:
+
+  {topost} RDMA/hns: Fix the illegal memory operation when cross page (2018-05-17 20:32:09 +0800)
+
+are available in the git repository at:
+
+  git@github.com:hisilicon/kernel-dev.git topic-virt-4.16.2-v3
+
+for you to fetch changes up to ff9171b5ff35c9f42e9ee1c4f08626d71f181b1e:
+
+  arm64: kpti: Use early_param for kpti= command-line option (2018-07-28 09:38:29 +0100)
+
+----------------------------------------------------------------
+Will Deacon (1):
+      arm64: kpti: Use early_param for kpti= command-line option
+
+ arch/arm64/kernel/cpufeature.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)

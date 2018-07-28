@@ -1,0 +1,18 @@
+The following changes since commit 6ea9137ffe73f8d19d6bdd8841795d1caf6adf1d:
+
+  {topost} scsi: hisi_sas: set the value of aging timer to minimum value (2018-07-28 15:24:22 +0800)
+
+are available in the git repository at:
+
+  git@github.com:hisilicon/kernel-dev.git topic-virt-4.18-v2
+
+for you to fetch changes up to 25ec9ccb6fd128807a09f8e4fecb5adb7155057a:
+
+  arm64: kpti: Use early_param for kpti= command-line option (2018-07-28 09:44:39 +0100)
+
+----------------------------------------------------------------
+Will Deacon (1):
+      arm64: kpti: Use early_param for kpti= command-line option
+
+ arch/arm64/kernel/cpufeature.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
