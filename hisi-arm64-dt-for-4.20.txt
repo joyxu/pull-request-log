@@ -15,7 +15,7 @@ ARM64: DT: Hisilicon SoC DT updates for 4.20
 
 - Add missing clocks for Hi6220
 - Switch to updated coresight bindings for Hi6220
-- Add DT bingdings and support for Hi3670 SoC and HiKey970 board
+- Add DT bindings and support for Hi3670 SoC and HiKey970 board
 
 ----------------------------------------------------------------
 Manivannan Sadhasivam (4):
