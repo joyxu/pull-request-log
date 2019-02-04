@@ -1,0 +1,48 @@
+The following changes since commit bfeffd155283772bbe78c6a05dec7c0128ee500c:
+
+  Linux 5.0-rc1 (2019-01-06 17:08:20 -0800)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-5.1v2
+
+for you to fetch changes up to 8d26c1390aec795d492b8de5e4437751e8805a1d:
+
+  arm64: dts: hikey: Revert "Enable HS200 mode on eMMC" (2019-02-04 10:20:42 +0000)
+
+----------------------------------------------------------------
+ARM64: DT: Hisilicon SoCs DT updates for 5.1
+
+* Hi6220 SoC and related boards:
+  - Add DMA entries to enable DMA for Bluetooth transfers
+  - Add power-on delay to make wifi stable
+  - Revert HS200 mode to avoid eMMC controller resets and block read failures
+
+* Hi3660 SoC and related boards:
+  - Fix SD card detection via setting cd-gpios correctly
+
+* Hi3798 SoC and related boards:
+  - Fix malformed SPDX license identifier
+
+----------------------------------------------------------------
+Alistair Strachan (1):
+      arm64: dts: hikey: Revert "Enable HS200 mode on eMMC"
+
+Jan Kiszka (1):
+      arm64: dts: hikey: Give wifi some time after power-on
+
+John Stultz (1):
+      arm64: dts: hikey: Add DMA entries for Bluetooth UART
+
+Shawn Guo (1):
+      arm64: dts: hi3798cv200: fix malformed SPDX license identifier
+
+Vincent Guittot (1):
+      arm64: dts: hikey960: fix SDcard detection
+
+ arch/arm64/boot/dts/hisilicon/hi3660-hikey960.dts    | 3 +--
+ arch/arm64/boot/dts/hisilicon/hi3798cv200-poplar.dts | 4 +---
+ arch/arm64/boot/dts/hisilicon/hi3798cv200.dtsi       | 4 +---
+ arch/arm64/boot/dts/hisilicon/hi6220-hikey.dts       | 2 +-
+ arch/arm64/boot/dts/hisilicon/hi6220.dtsi            | 2 ++
+ 5 files changed, 6 insertions(+), 9 deletions(-)
