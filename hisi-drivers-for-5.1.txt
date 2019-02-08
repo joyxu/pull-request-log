@@ -1,0 +1,23 @@
+The following changes since commit bfeffd155283772bbe78c6a05dec7c0128ee500c:
+
+  Linux 5.0-rc1 (2019-01-06 17:08:20 -0800)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-drivers-for-5.1
+
+for you to fetch changes up to 705c0ee8d4a64b072e324f8daa8767e92560a892:
+
+  bus: hisi_lpc: Don't fail probe for unrecognised child devices (2019-02-08 09:18:53 +0000)
+
+----------------------------------------------------------------
+ARM64: hisi: SoC driver updates for 5.1
+
+- Add compatibility support for different FWs in the hisi LPC bus driver
+
+----------------------------------------------------------------
+John Garry (1):
+      bus: hisi_lpc: Don't fail probe for unrecognised child devices
+
+ drivers/bus/hisi_lpc.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
