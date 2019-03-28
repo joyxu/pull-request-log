@@ -1,0 +1,36 @@
+The following changes since commit df9ac6a1ed215e16ecb7c66d7dd8b7cdbdb63995:
+
+  DTS:2019031914556 Description:sync plinth-config from 5.0 (2019-03-23 13:30:13 +0800)
+
+are available in the Git repository at:
+
+  git@github.com:hisilicon/kernel-dev.git topic-virt-5.1
+
+for you to fetch changes up to f46c746e3466223d3408694d42534bc557c4c4cc:
+
+  {frommaintainer} KVM: arm/arm64: vgic-its: Make attribute accessors static (2019-03-28 15:38:11 +0000)
+
+----------------------------------------------------------------
+Marc Zyngier (4):
+      {frommaintainer} KVM: arm64: Reset the PMU in preemptible context
+      {frommaintainer} arm64: KVM: Always set ICH_HCR_EL2.EN if GICv4 is enabled
+      {frommaintainer} KVM: arm/arm64: vgic-its: Take the srcu lock when writing to guest memory
+      {frommaintainer} KVM: arm/arm64: vgic-its: Take the srcu lock when parsing the memslots
+
+Suzuki K Poulose (2):
+      {frommaintainer} KVM: arm/arm64: Enforce PTE mappings at stage2 when needed
+      {frommaintainer} KVM: arm/arm64: Fix handling of stage2 huge mappings
+
+YueHaibing (1):
+      {frommaintainer} KVM: arm/arm64: vgic-its: Make attribute accessors static
+
+ arch/arm/include/asm/kvm_mmu.h        |  11 ++++
+ arch/arm/include/asm/stage2_pgtable.h |   2 +
+ arch/arm64/include/asm/kvm_mmu.h      |  11 ++++
+ arch/arm64/kvm/reset.c                |   6 +-
+ virt/kvm/arm/hyp/vgic-v3-sr.c         |   4 +-
+ virt/kvm/arm/mmu.c                    | 102 +++++++++++++++++++++-------------
+ virt/kvm/arm/vgic/vgic-its.c          |  31 +++++++----
+ virt/kvm/arm/vgic/vgic-v3.c           |   4 +-
+ virt/kvm/arm/vgic/vgic.c              |  14 +++--
+ 9 files changed, 124 insertions(+), 61 deletions(-)
