@@ -1,0 +1,51 @@
+The following changes since commit 9e98c678c2d6ae3a17cb2de55d17f69dddaa231b:
+
+  Linux 5.1-rc1 (2019-03-17 14:22:26 -0700)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-5.2
+
+for you to fetch changes up to ddd0dc915647f12b5cbfa0a5e7d65389dcd71771:
+
+  arm64: dts: hisilicon: hi3670: Add UFS controller support (2019-04-15 16:01:34 +0100)
+
+----------------------------------------------------------------
+ARM64: DT: Hisilicon SoCs DT updates for 5.2
+
+* Hi3660 SoC and related boards:
+  - Added DMA support for the uart nodes
+  - Added the asp DMA controller node
+  - Replaced dma-min-chan with dma-channel-mask to follow the binding
+
+* Hi3670 SoC and related boards:
+  - Reused Hi3660 reset to support Hi3670, updated the binding
+    document and added dts node
+  - Reused Hi3660 MMC controller to support Hi3670, updated the
+    binding document and added related nodes to support SD and WiFi
+    for the SoC and hikey970 board
+  - Added UFS controller node
+
+----------------------------------------------------------------
+John Stultz (2):
+      arm64: dts: hi3660: Add dma to uart nodes
+      arm64: dts: hi3660: Fixup unofficial dma-min-chan to dma-channel-mask
+
+Manivannan Sadhasivam (6):
+      dt-bindings: reset: Add HI3670 reset controller binding
+      arm64: dts: hisilicon: hi3670: Add reset controller support
+      dt-bindings: mmc: Add HI3670 MMC controller binding
+      arm64: dts: hisilicon: hi3670: Add MMC controller support
+      arm64: dts: hisilicon: hikey970: Add SD and WiFi support
+      arm64: dts: hisilicon: hi3670: Add UFS controller support
+
+Youlin Wang (1):
+      arm64: dts: hi3660: Add hisi asp dma device
+
+ .../devicetree/bindings/mmc/k3-dw-mshc.txt         |   2 +
+ .../bindings/reset/hisilicon,hi3660-reset.txt      |   7 +-
+ arch/arm64/boot/dts/hisilicon/hi3660.dtsi          |  20 +++-
+ arch/arm64/boot/dts/hisilicon/hi3670-hikey970.dts  |  75 ++++++++++++++
+ arch/arm64/boot/dts/hisilicon/hi3670.dtsi          |  62 +++++++++++
+ .../arm64/boot/dts/hisilicon/hikey970-pinctrl.dtsi | 115 +++++++++++++++++++++
+ 6 files changed, 277 insertions(+), 4 deletions(-)
