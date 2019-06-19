@@ -1,0 +1,24 @@
+The following changes since commit a188339ca5a396acc588e5851ed7e19f66b0ebd9:
+
+  Linux 5.2-rc1 (2019-05-19 15:47:09 -0700)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm32-dt-for-5.3
+
+for you to fetch changes up to 06c3cba62b3be0a46427a2a63b2f08c617d14530:
+
+  ARM: dts: hip04: Update coresight DT bindings (2019-06-19 16:28:34 +0100)
+
+----------------------------------------------------------------
+ARM: DT: Hisilicon ARM32 SoCs updates for v5.3
+
+- Updated CoreSight funnel and replicator using new bindings to fix warning
+  for the hip04.
+
+----------------------------------------------------------------
+Leo Yan (1):
+      ARM: dts: hip04: Update coresight DT bindings
+
+ arch/arm/boot/dts/hip04.dtsi | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
