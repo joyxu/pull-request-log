@@ -15,7 +15,7 @@ Hisilicon fixes for v5.2-rc
 
 - fixed RCU usage in logical PIO
 - Added a function to unregister a logical PIO range in logical PIO
-  to support the fixs in the hisi-lpc driver
+  to support the fixes in the hisi-lpc driver
 - fixed and optimized hisi-lpc driver to avoid potential use-after-free
   and driver unbind crash
 
