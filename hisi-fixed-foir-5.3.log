@@ -1,0 +1,33 @@
+The following changes since commit 5f9e832c137075045d15cd6899ab0505cfb2ca4b:
+
+  Linus 5.3-rc1 (2019-07-21 14:05:38 -0700)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-fixes-for-5.3
+
+for you to fetch changes up to 10e62b47973b0b0ceda076255bcb147b83e20517:
+
+  bus: hisi_lpc: Add .remove method to avoid driver unbind crash (2019-08-13 14:54:34 +0800)
+
+----------------------------------------------------------------
+Hisilicon fixes for v5.3-rc
+
+- Fixed RCU usage in logical PIO
+- Awdded a function to unregister a logical PIO range in logical PIO
+  to support the fixes in the hisi-lpc driver
+- Fixed and optimized hisi-lpc driver to avoid potential use-after-free
+  and driver unbind crash
+
+----------------------------------------------------------------
+John Garry (5):
+      lib: logic_pio: Fix RCU usage
+      lib: logic_pio: Avoid possible overlap for unregistering regions
+      lib: logic_pio: Add logic_pio_unregister_range()
+      bus: hisi_lpc: Unregister logical PIO range to avoid potential use-after-free
+      bus: hisi_lpc: Add .remove method to avoid driver unbind crash
+
+ drivers/bus/hisi_lpc.c    | 47 ++++++++++++++++++++++++++----
+ include/linux/logic_pio.h |  1 +
+ lib/logic_pio.c           | 73 +++++++++++++++++++++++++++++++++++------------
+ 3 files changed, 96 insertions(+), 25 deletions(-)
