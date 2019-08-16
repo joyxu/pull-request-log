@@ -1,0 +1,24 @@
+The following changes since commit 5f9e832c137075045d15cd6899ab0505cfb2ca4b:
+
+  Linus 5.3-rc1 (2019-07-21 14:05:38 -0700)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-defconfig-for-5.4
+
+for you to fetch changes up to 0c26a3345b4f402b87d9be00df4d3054cd8ba46f:
+
+  arm64: defconfig: Enable CONFIG_ACPI_APEI_PCIEAER (2019-08-16 09:36:07 +0800)
+
+----------------------------------------------------------------
+ARM64: hisilicon: defconfig updates for v5.4
+
+- Enable ACPI_APEI_PCIEAER for the hisilicon D06 board to
+  support PCIe AER error report
+
+----------------------------------------------------------------
+Zhou Wang (1):
+      arm64: defconfig: Enable CONFIG_ACPI_APEI_PCIEAER
+
+ arch/arm64/configs/defconfig | 1 +
+ 1 file changed, 1 insertion(+)
