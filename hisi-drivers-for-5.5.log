@@ -16,7 +16,7 @@ ARM64: hisi: SoC driver updates for 5.5
 - check the LOGIC_PIO_INDIRECT region ops at registration instead of
   in the IO port accessors to optimise the lib/ligic_pio.c
 
-- add the hisi LPC driver to the build test for the other architecutres
+- add the hisi LPC driver to the build test for the other architectures
   by updating the hisi LPC Kconfig and adding a dummy PIO_INDIRECT_SIZE
 
 - clean the sparse complains of the hisi LPC driver
