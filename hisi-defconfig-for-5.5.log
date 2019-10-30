@@ -1,0 +1,25 @@
+The following changes since commit 54ecb8f7028c5eb3d740bb82b0f1d90f2df63c5c:
+
+  Linux 5.4-rc1 (2019-09-30 10:35:40 -0700)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-defconfig-for-5.5
+
+for you to fetch changes up to 006ece996d2206082d281ba271b1ed17f1ee6422:
+
+  arm64: defconfig: Enable SMMU v3 PMCG (2019-10-26 15:29:03 +0800)
+
+----------------------------------------------------------------
+ARM64: hisilicon: defconfig updates for 5.5
+
+- enable ARM SMMUv3 PMU and hisi ZIP controller as module for
+  Kunpeng920 SoC
+
+----------------------------------------------------------------
+Zhou Wang (2):
+      arm64: defconfig: Enable HiSilicon ZIP controller
+      arm64: defconfig: Enable SMMU v3 PMCG
+
+ arch/arm64/configs/defconfig | 2 ++
+ 1 file changed, 2 insertions(+)

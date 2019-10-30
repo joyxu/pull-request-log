@@ -1,0 +1,40 @@
+The following changes since commit 54ecb8f7028c5eb3d740bb82b0f1d90f2df63c5c:
+
+  Linux 5.4-rc1 (2019-09-30 10:35:40 -0700)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-drivers-for-5.5
+
+for you to fetch changes up to e9541b372b229f6babd93afcc623e5428b4026a3:
+
+  logic_pio: Build into a library (2019-10-28 20:46:05 +0800)
+
+----------------------------------------------------------------
+ARM64: hisi: SoC driver updates for 5.5
+
+- check the LOGIC_PIO_INDIRECT region ops at registration instead of
+  in the IO port accessors to optimise the lib/ligic_pio.c
+
+- add the hisi LPC driver to the build test for the other architecutres
+  by updating the hisi LPC Kconfig and adding a dummy PIO_INDIRECT_SIZE
+
+- clean the sparse complains of the hisi LPC driver
+
+- build logic_pio into a lib to avoid including in the vmlinux when not
+  referenced
+
+----------------------------------------------------------------
+John Garry (5):
+      lib: logic_pio: Enforce LOGIC_PIO_INDIRECT region ops are set at registration
+      logic_pio: Define PIO_INDIRECT_SIZE for !CONFIG_INDIRECT_PIO
+      bus: hisi_lpc: Clean some types
+      bus: hisi_lpc: Expand build test coverage
+      logic_pio: Build into a library
+
+ drivers/bus/Kconfig       |  4 ++--
+ drivers/bus/hisi_lpc.c    |  9 ++++-----
+ include/linux/logic_pio.h |  4 ++--
+ lib/Makefile              |  2 +-
+ lib/logic_pio.c           | 14 ++++++++------
+ 5 files changed, 17 insertions(+), 16 deletions(-)

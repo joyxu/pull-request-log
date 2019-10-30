@@ -1,0 +1,23 @@
+The following changes since commit 54ecb8f7028c5eb3d740bb82b0f1d90f2df63c5c:
+
+  Linux 5.4-rc1 (2019-09-30 10:35:40 -0700)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-5.5
+
+for you to fetch changes up to 37a92df9612265307bee53d423b2d7e7eb0fa985:
+
+  arm64: dts: hisilicon: Add Mali-450 MP4 GPU DT entry (2019-10-26 15:39:00 +0800)
+
+----------------------------------------------------------------
+ARM64: DT: Hisilicon SoCs DT updates for 5.5
+
+- add Mali450 MP4 GPU node in the hi6220 SoC
+
+----------------------------------------------------------------
+Peter Griffin (1):
+      arm64: dts: hisilicon: Add Mali-450 MP4 GPU DT entry
+
+ arch/arm64/boot/dts/hisilicon/hi6220.dtsi | 38 +++++++++++++++++++++++++++++++
+ 1 file changed, 38 insertions(+)

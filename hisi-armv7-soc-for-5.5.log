@@ -1,0 +1,24 @@
+The following changes since commit 54ecb8f7028c5eb3d740bb82b0f1d90f2df63c5c:
+
+  Linux 5.4-rc1 (2019-09-30 10:35:40 -0700)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-armv7-soc-for-5.5
+
+for you to fetch changes up to 88ae095b2855c5caf18cc476b03f5b0c96b040a2:
+
+  ARM: hisi: drop useless depend on ARCH_MULTI_V7 (2019-10-26 15:31:22 +0800)
+
+----------------------------------------------------------------
+ARM: mach-hisi: Hisilicon SoC updates for 5.5
+
+- drop the ARCH_MULTI_V7 dependency in the sub-menu of ARCH_HISI
+  since ARCH_HISI depends on ARCH_MULTI_V7
+
+----------------------------------------------------------------
+Kefeng Wang (1):
+      ARM: hisi: drop useless depend on ARCH_MULTI_V7
+
+ arch/arm/mach-hisi/Kconfig | 16 ++++++----------
+ 1 file changed, 6 insertions(+), 10 deletions(-)
