@@ -6,9 +6,9 @@ are available in the Git repository at:
 
   git://github.com/hisilicon/linux-hisi.git tags/hisi-drivers-for-5.5
 
-for you to fetch changes up to e9541b372b229f6babd93afcc623e5428b4026a3:
+for you to fetch changes up to f361c863b3bfa602da37d7a94d90a5dfee0d08fe:
 
-  logic_pio: Build into a library (2019-10-28 20:46:05 +0800)
+  logic_pio: Build into a library (2019-11-05 08:48:07 +0800)
 
 ----------------------------------------------------------------
 ARM64: hisi: SoC driver updates for 5.5
@@ -17,6 +17,7 @@ ARM64: hisi: SoC driver updates for 5.5
   in the IO port accessors to optimise the lib/ligic_pio.c
 
 - add the hisi LPC driver to the build test for the other architectures
+  except ALPHA, C6X, HEXAGON and PARISC as they do not define {read,write}sb
   by updating the hisi LPC Kconfig and adding a dummy PIO_INDIRECT_SIZE
 
 - clean the sparse complains of the hisi LPC driver
@@ -32,9 +33,9 @@ John Garry (5):
       bus: hisi_lpc: Expand build test coverage
       logic_pio: Build into a library
 
- drivers/bus/Kconfig       |  4 ++--
+ drivers/bus/Kconfig       |  5 +++--
  drivers/bus/hisi_lpc.c    |  9 ++++-----
  include/linux/logic_pio.h |  4 ++--
  lib/Makefile              |  2 +-
  lib/logic_pio.c           | 14 ++++++++------
- 5 files changed, 17 insertions(+), 16 deletions(-)
+ 5 files changed, 18 insertions(+), 16 deletions(-)
