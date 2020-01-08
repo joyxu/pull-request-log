@@ -1,0 +1,26 @@
+The following changes since commit e42617b825f8073569da76dc4510bfa019b1c35a:
+
+  Linux 5.5-rc1 (2019-12-08 14:57:55 -0800)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-5.6
+
+for you to fetch changes up to 6fa154e46c723b1eaa24ad16fbe92c2a3bf98dbc:
+
+  arm64: dts: hi3798cv200: correct PCIe 'bus-range' setting (2020-01-08 19:33:54 +0800)
+
+----------------------------------------------------------------
+ARM64: DT: Hisilicon SoCs DT updates for 5.6
+
+- Add remote control map name of the IR device for the hi3798cv200 poplar board
+- Correct the PCIe bus range setting for the hi3798cv200
+
+----------------------------------------------------------------
+Shawn Guo (2):
+      arm64: dts: hi3798cv200-poplar: add linux,rc-map-name for IR
+      arm64: dts: hi3798cv200: correct PCIe 'bus-range' setting
+
+ arch/arm64/boot/dts/hisilicon/hi3798cv200-poplar.dts | 1 +
+ arch/arm64/boot/dts/hisilicon/hi3798cv200.dtsi       | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
