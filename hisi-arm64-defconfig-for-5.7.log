@@ -1,0 +1,24 @@
+The following changes since commit bb6d3fb354c5ee8d6bde2d576eb7220ea09862b9:
+
+  Linux 5.6-rc1 (2020-02-09 16:08:48 -0800)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-defconfig-for-5.7
+
+for you to fetch changes up to d698e544e2107e3e161ddbb3a28324197ecd537f:
+
+  arm64: defconfig: Enable MEGARAID_SAS (2020-02-28 17:32:19 +0800)
+
+----------------------------------------------------------------
+ARM64: hisilicon: defconfig updates for 5.7
+
+- Enable MEGARAID_SAS to be able to boot from
+  disk for the D06CS development board
+
+----------------------------------------------------------------
+John Garry (1):
+      arm64: defconfig: Enable MEGARAID_SAS
+
+ arch/arm64/configs/defconfig | 1 +
+ 1 file changed, 1 insertion(+)

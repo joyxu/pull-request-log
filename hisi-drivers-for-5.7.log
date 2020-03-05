@@ -1,0 +1,24 @@
+The following changes since commit bb6d3fb354c5ee8d6bde2d576eb7220ea09862b9:
+
+  Linux 5.6-rc1 (2020-02-09 16:08:48 -0800)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-drivers-for-5.7
+
+for you to fetch changes up to a6dd255bdd7d00bbdbf78ba00bde9fc64f86c3a7:
+
+  bus: hisi_lpc: Fixup IO ports addresses to avoid use-after-free in host removal (2020-02-28 17:30:49 +0800)
+
+----------------------------------------------------------------
+ARM64: hisi: SoC driver updates for 5.7
+
+- Fix up the device resources for the broken firmware to avoid
+  use-after-free warnings from KASAN in the host remval path
+
+----------------------------------------------------------------
+John Garry (1):
+      bus: hisi_lpc: Fixup IO ports addresses to avoid use-after-free in host removal
+
+ drivers/bus/hisi_lpc.c | 27 +++++++++++++++++++++++++--
+ 1 file changed, 25 insertions(+), 2 deletions(-)
