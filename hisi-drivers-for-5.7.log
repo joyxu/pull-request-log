@@ -14,7 +14,7 @@ for you to fetch changes up to a6dd255bdd7d00bbdbf78ba00bde9fc64f86c3a7:
 ARM64: hisi: SoC driver updates for 5.7
 
 - Fix up the device resources for the broken firmware to avoid
-  use-after-free warnings from KASAN in the host remval path
+  use-after-free warnings from KASAN in the host removal path
 
 ----------------------------------------------------------------
 John Garry (1):
