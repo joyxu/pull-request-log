@@ -1,0 +1,30 @@
+The following changes since commit 8f3d9f354286745c751374f5f1fcafee6b3f3136:
+
+  Linux 5.7-rc1 (2020-04-12 12:35:55 -0700)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-5.8
+
+for you to fetch changes up to fd955a7eac362d87f9dcb5c2f2c3e4355726c6fc:
+
+  arm64: dts: hi6220: Add CTI options (2020-05-07 14:44:56 +0800)
+
+----------------------------------------------------------------
+ARM64: DT: Hisilicon SoCs DT updates for 5.8
+
+- Add pinconf for spi2 and spi3 nodes and increase the drive
+  strength to achieve the max speed for the Hikey960 board
+- Add CTI nodes for the Hikey620 board
+
+----------------------------------------------------------------
+Loic Poulain (1):
+      arm64: dts: hikey960: pinctrl: Fix spi2/spi3 pinconf
+
+Mike Leach (1):
+      arm64: dts: hi6220: Add CTI options
+
+ arch/arm64/boot/dts/hisilicon/hi3660.dtsi          |   4 +-
+ .../arm64/boot/dts/hisilicon/hi6220-coresight.dtsi | 130 +++++++++++++++++++--
+ .../arm64/boot/dts/hisilicon/hikey960-pinctrl.dtsi |   6 +-
+ 3 files changed, 127 insertions(+), 13 deletions(-)

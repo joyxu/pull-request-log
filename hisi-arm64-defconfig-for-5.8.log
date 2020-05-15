@@ -1,0 +1,24 @@
+The following changes since commit 8f3d9f354286745c751374f5f1fcafee6b3f3136:
+
+  Linux 5.7-rc1 (2020-04-12 12:35:55 -0700)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-defconfig-for-5.8
+
+for you to fetch changes up to 528443e32a3d53000d30bb8be04a382b04e57470:
+
+  arm64: defconfig: Enable UACCE/PCI PASID/SEC2/HPRE configs (2020-05-15 09:29:47 +0800)
+
+----------------------------------------------------------------
+ARM64: hisilicon: defconfig updates for 5.8
+
+- Enable PCI PASID as built-in module and UACCE/SEC2/HPRE as
+  loadable modules to support UACCE use case for the D06CS board
+
+----------------------------------------------------------------
+Zhou Wang (1):
+      arm64: defconfig: Enable UACCE/PCI PASID/SEC2/HPRE configs
+
+ arch/arm64/configs/defconfig | 4 ++++
+ 1 file changed, 4 insertions(+)

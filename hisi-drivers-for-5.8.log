@@ -1,0 +1,28 @@
+The following changes since commit 8f3d9f354286745c751374f5f1fcafee6b3f3136:
+
+  Linux 5.7-rc1 (2020-04-12 12:35:55 -0700)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-drivers-for-5.8
+
+for you to fetch changes up to 4acaa93ef64377417677d777a596e22da68c5e0d:
+
+  logic_pio: Use _inX() and _outX() (2020-05-07 14:54:26 +0800)
+
+----------------------------------------------------------------
+ARM64: hisi: SoC driver updates for 5.8
+
+- Generate consistent behaviour for logic_pio by defining and using
+  generic _inX() and _outX() in asm-generic/io.h which have per-arch
+  overrideable barriers.
+
+----------------------------------------------------------------
+John Garry (3):
+      io: Provide _inX() and _outX()
+      logic_pio: Improve macro argument name
+      logic_pio: Use _inX() and _outX()
+
+ include/asm-generic/io.h | 64 +++++++++++++++++++++++++++++++++---------------
+ lib/logic_pio.c          | 22 ++++++++---------
+ 2 files changed, 55 insertions(+), 31 deletions(-)
