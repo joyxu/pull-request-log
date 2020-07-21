@@ -1,0 +1,36 @@
+The following changes since commit b3a9e3b9622ae10064826dccb4f7a52bd88c7407:
+
+  Linux 5.8-rc1 (2020-06-14 12:45:04 -0700)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-5.9
+
+for you to fetch changes up to bbe28fc3cbabbef781bcdf847615d52ce2e26e42:
+
+  arm64: dts: hisilicon: hikey: fixes to comply with adi, adv7533 DT binding (2020-07-17 11:09:37 +0800)
+
+----------------------------------------------------------------
+ARM64: DT: Hisilicon SoCs DT updates for 5.9
+
+- Refactor hi6220-hikey dts to use phandles for overriding nodes
+- Align UART node name to fix dtschema validator warnings for hi6220
+- Add basic usb gadget support on hikey960
+- Update adv7533 nodes to meet with the binding for hikey and hikey960
+
+----------------------------------------------------------------
+John Stultz (1):
+      dts: hi3660: Add support for basic usb gadget on Hikey960
+
+Krzysztof Kozlowski (2):
+      arm64: dts: hisilicon: Use phandles for overriding nodes in hi6220
+      arm64: dts: hisilicon: Align UART nodename with dtschema
+
+Ricardo Cañuelo (1):
+      arm64: dts: hisilicon: hikey: fixes to comply with adi, adv7533 DT binding
+
+ arch/arm64/boot/dts/hisilicon/hi3660-hikey960.dts |  83 +++++
+ arch/arm64/boot/dts/hisilicon/hi3660.dtsi         |  34 ++
+ arch/arm64/boot/dts/hisilicon/hi6220-hikey.dts    | 428 +++++++++++-----------
+ arch/arm64/boot/dts/hisilicon/hi6220.dtsi         |  10 +-
+ 4 files changed, 333 insertions(+), 222 deletions(-)

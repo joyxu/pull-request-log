@@ -1,0 +1,25 @@
+The following changes since commit b3a9e3b9622ae10064826dccb4f7a52bd88c7407:
+
+  Linux 5.8-rc1 (2020-06-14 12:45:04 -0700)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm32-dt-for-5.9
+
+for you to fetch changes up to 5720fcdc2e5af74e51c5e3102fcefd9fb061a666:
+
+  ARM: dts: hisilicon: Align L2 cache-controller nodename with dtschema (2020-07-17 10:09:21 +0800)
+
+----------------------------------------------------------------
+ARM: DT: Hisilicon ARM32 SoCs updates for v5.9
+
+- Update L2 cache controller nodes to fix dtschema validator warnings
+  for hi3620 and hix5hd2
+
+----------------------------------------------------------------
+Krzysztof Kozlowski (1):
+      ARM: dts: hisilicon: Align L2 cache-controller nodename with dtschema
+
+ arch/arm/boot/dts/hi3620.dtsi     | 2 +-
+ arch/arm/boot/dts/hisi-x5hd2.dtsi | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
