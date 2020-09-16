@@ -1,0 +1,36 @@
+The following changes since commit 9123e3a74ec7b934a4a099e98af6a61c2f80bbf5:
+
+  Linux 5.9-rc1 (2020-08-16 13:04:57 -0700)
+
+are available in the git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-5.10
+
+for you to fetch changes up to a665b2c1d28403e385054447cc319095527bedde:
+
+  arm64: dts: hisilicon: Fix SP805 clocks (2020-09-14 15:27:04 +0800)
+
+----------------------------------------------------------------
+ARM64: DT: Hisilicon ARM64 SoCs DT updates for 5.10
+
+- Change the status properties from "ok" to "okay" for
+  all the hisilicon SoCs
+- Update the SP805 nodes to have the correct clocks and
+  clock names for the hi3660 and hi6220 SoCs
+
+----------------------------------------------------------------
+Adrian Schmutzler (1):
+      arm64: dts: hisilicon: replace status value "ok" by "okay"
+
+Andre Przywara (1):
+      arm64: dts: hisilicon: Fix SP805 clocks
+
+ arch/arm64/boot/dts/hisilicon/hi3660-hikey960.dts |  6 +++---
+ arch/arm64/boot/dts/hisilicon/hi3660.dtsi         | 10 ++++++----
+ arch/arm64/boot/dts/hisilicon/hi3670-hikey970.dts |  2 +-
+ arch/arm64/boot/dts/hisilicon/hi6220-hikey.dts    | 18 +++++++++---------
+ arch/arm64/boot/dts/hisilicon/hi6220.dtsi         |  7 ++++---
+ arch/arm64/boot/dts/hisilicon/hip05-d02.dts       |  6 +++---
+ arch/arm64/boot/dts/hisilicon/hip06-d03.dts       | 18 +++++++++---------
+ arch/arm64/boot/dts/hisilicon/hip07-d05.dts       | 20 ++++++++++----------
+ 8 files changed, 45 insertions(+), 42 deletions(-)

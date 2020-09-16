@@ -1,0 +1,29 @@
+The following changes since commit 9123e3a74ec7b934a4a099e98af6a61c2f80bbf5:
+
+  Linux 5.9-rc1 (2020-08-16 13:04:57 -0700)
+
+are available in the git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm32-dt-for-5.10
+
+for you to fetch changes up to 3328c656663f59382879992419859d73f359ac59:
+
+  ARM: dts: hisilicon: Fix SP805 clocks (2020-09-14 16:31:06 +0800)
+
+----------------------------------------------------------------
+ARM: DT: Hisilicon ARM32 SoCs DT updates for 5.10
+
+- Update the SP804 nodes to have the correct clocks and
+  clock names for the hi3620 SoC
+- Update the SP805 nodes to have the correct clocks and
+  clock names for the hix5hd2 SoC
+
+----------------------------------------------------------------
+Andre Przywara (2):
+      ARM: dts: hisilicon: Fix SP804 users
+      ARM: dts: hisilicon: Fix SP805 clocks
+
+ arch/arm/boot/dts/hi3620.dtsi     | 30 ++++++++++++++++++++----------
+ arch/arm/boot/dts/hip04.dtsi      |  4 ++--
+ arch/arm/boot/dts/hisi-x5hd2.dtsi |  5 +++--
+ 3 files changed, 25 insertions(+), 14 deletions(-)
