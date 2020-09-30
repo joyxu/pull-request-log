@@ -1,0 +1,26 @@
+The following changes since commit 9123e3a74ec7b934a4a099e98af6a61c2f80bbf5:
+
+  Linux 5.9-rc1 (2020-08-16 13:04:57 -0700)
+
+are available in the git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm-soc-for-5.10
+
+for you to fetch changes up to c5fdb66829d16d4eb6d452034de4f1017ca2410e:
+
+  ARM: debug: add UART early console support for SD5203 (2020-09-30 09:56:40 +0800)
+
+----------------------------------------------------------------
+Hisilicon ARM SoC updates for v5.10
+
+- Add SD5203 SoC support which core is ARM926EJ-S
+- Add Low-level debugging support for SD5203
+
+----------------------------------------------------------------
+Kefeng Wang (2):
+      ARM: hisi: add support for SD5203 SoC
+      ARM: debug: add UART early console support for SD5203
+
+ arch/arm/Kconfig.debug     | 11 ++++++++++-
+ arch/arm/mach-hisi/Kconfig | 16 ++++++++++++++--
+ 2 files changed, 24 insertions(+), 3 deletions(-)

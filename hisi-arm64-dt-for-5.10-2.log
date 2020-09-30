@@ -1,0 +1,31 @@
+The following changes since commit 3328c656663f59382879992419859d73f359ac59:
+
+  ARM: dts: hisilicon: Fix SP805 clocks (2020-09-14 16:31:06 +0800)
+
+are available in the git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm32-dt-for-5.10-tag2
+
+for you to fetch changes up to b2d9534284bab25ed7d06d2284fb7ed44d04d858:
+
+  ARM: dts: add SD5203 dts (2020-09-30 10:10:46 +0800)
+
+----------------------------------------------------------------
+ARM: DT: Hisilicon ARM32 SoCs DT updates for 5.10 (take two)
+
+- Fix system controller compatible for the hi3620 and hip04 SoCs
+- Add basic device tree for the hisilicon SD5203 SoC
+
+----------------------------------------------------------------
+Kefeng Wang (1):
+      ARM: dts: add SD5203 dts
+
+Zhen Lei (1):
+      ARM: dts: hisilicon: fix ststem controller compatible node
+
+ arch/arm/boot/dts/Makefile    |  2 +
+ arch/arm/boot/dts/hi3620.dtsi |  2 +-
+ arch/arm/boot/dts/hip04.dtsi  |  2 +-
+ arch/arm/boot/dts/sd5203.dts  | 96 +++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 100 insertions(+), 2 deletions(-)
+ create mode 100644 arch/arm/boot/dts/sd5203.dts
