@@ -1,0 +1,42 @@
+The following changes since commit 3650b228f83adda7e5ee532e2b90429c03f7b9ec:
+
+  Linux 5.10-rc1 (2020-10-25 15:14:11 -0700)
+
+are available in the git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm32-dt-for-5.11
+
+for you to fetch changes up to d48b6ef74ab06c5b29bd9ee9e830bdc639b196ee:
+
+  ARM: dts: hisilicon: fix errors detected by syscon.yaml (2020-11-24 19:43:18 +0800)
+
+----------------------------------------------------------------
+ARM: DT: Hisilicon ARM32 DT updates for 5.11
+
+- Cleanups of the hisilicon DTS to align with the dtschema including
+  serial, usb, amba-bus, memory, mmc, spi and syscon. All of them do not
+  have any functional effect except passing dtschema checks or dtc W=2
+  builds.
+
+----------------------------------------------------------------
+Zhen Lei (8):
+      ARM: dts: hisilicon: fix errors detected by snps-dw-apb-uart.yaml
+      ARM: dts: hisilicon: fix errors detected by pl011.yaml
+      ARM: dts: hisilicon: fix errors detected by usb yaml
+      ARM: dts: hisilicon: fix errors detected by simple-bus.yaml
+      ARM: dts: hisilicon: fix errors detected by root-node.yaml
+      ARM: dts: hisilicon: fix errors detected by synopsys-dw-mshc.yaml
+      ARM: dts: hisilicon: fix errors detected by spi-pl022.yaml
+      ARM: dts: hisilicon: fix errors detected by syscon.yaml
+
+ arch/arm/boot/dts/hi3519-demb.dts    |  2 +-
+ arch/arm/boot/dts/hi3519.dtsi        | 32 +++++++++++++--------------
+ arch/arm/boot/dts/hi3620-hi4511.dts  | 24 ++++++++++-----------
+ arch/arm/boot/dts/hi3620.dtsi        | 32 +++++++++++++--------------
+ arch/arm/boot/dts/hip01-ca9x2.dts    |  2 +-
+ arch/arm/boot/dts/hip01.dtsi         | 26 +++++++++++-----------
+ arch/arm/boot/dts/hip04-d01.dts      |  2 +-
+ arch/arm/boot/dts/hip04.dtsi         |  6 +++---
+ arch/arm/boot/dts/hisi-x5hd2-dkb.dts |  2 +-
+ arch/arm/boot/dts/hisi-x5hd2.dtsi    | 42 ++++++++++++++++++------------------
+ 10 files changed, 85 insertions(+), 85 deletions(-)

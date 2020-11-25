@@ -1,0 +1,46 @@
+The following changes since commit 3650b228f83adda7e5ee532e2b90429c03f7b9ec:
+
+  Linux 5.10-rc1 (2020-10-25 15:14:11 -0700)
+
+are available in the git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-5.11
+
+for you to fetch changes up to 25df3e1f64f54cfb4b23ff3ed1292c3eba94b22e:
+
+  arm64: dts: hisilicon: Use generic "ngpios" rather than "snps,nr-gpios" (2020-11-24 20:06:18 +0800)
+
+----------------------------------------------------------------
+ARM64: DT: Hisilicon ARM64 DT updates for 5.11
+
+- Cleanups of the hisilicon DTS to align with the dtschema. All of them do not
+  have any functional effect except passing dtschema checks or dtc W=2 builds.
+
+----------------------------------------------------------------
+Jisheng Zhang (1):
+      arm64: dts: hisilicon: Use generic "ngpios" rather than "snps,nr-gpios"
+
+Serge Semin (1):
+      arm64: dts: hi3660: Harmonize DWC USB3 DT nodes name
+
+Zhen Lei (11):
+      arm64: dts: hisilicon: normalize the node name of the ITS devices
+      arm64: dts: hisilicon: separate each group of data in the property "reg"
+      arm64: dts: hisilicon: write the values of property-units into a uint32 array
+      arm64: dts: hisilicon: remove unused property pinctrl-names
+      arm64: dts: hisilicon: place clock-names "biu" before "ciu"
+      arm64: dts: hisilicon: normalize the node name of the SMMU devices
+      arm64: dts: hisilicon: normalize the node name of the usb devices
+      arm64: dts: hisilicon: normalize the node name of the UART devices
+      arm64: dts: hisilicon: list all clocks required by spi-pl022.yaml
+      arm64: dts: hisilicon: list all clocks required by pl011.yaml
+      arm64: dts: hisilicon: list all clocks required by snps-dw-apb-uart.yaml
+
+ arch/arm64/boot/dts/hisilicon/hi3660.dtsi      |  13 +-
+ arch/arm64/boot/dts/hisilicon/hi3670.dtsi      |   5 +-
+ arch/arm64/boot/dts/hisilicon/hi3798cv200.dtsi |  27 ++--
+ arch/arm64/boot/dts/hisilicon/hi6220.dtsi      |   4 +-
+ arch/arm64/boot/dts/hisilicon/hip05.dtsi       |  24 ++--
+ arch/arm64/boot/dts/hisilicon/hip06.dtsi       |  14 +-
+ arch/arm64/boot/dts/hisilicon/hip07.dtsi       | 178 ++++++++++++-------------
+ 7 files changed, 132 insertions(+), 133 deletions(-)
