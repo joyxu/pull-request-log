@@ -1,0 +1,42 @@
+The following changes since commit 5c8fe583cce542aa0b84adc939ce85293de36e5e:
+
+  Linux 5.11-rc1 (2020-12-27 15:30:22 -0800)
+
+are available in the git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-5.12
+
+for you to fetch changes up to 9091f9b9d2965983ee38dd68609002daeacf5199:
+
+  arm64: dts: hisilicon: hi3670.dtsi: add I2C settings (2021-01-26 15:48:22 +0800)
+
+----------------------------------------------------------------
+ARM64: DT: Hisilicon ARM64 DT updates for 5.12
+
+- Further cleanups of the hisilicon DTS to align with the dtschema
+- Add or update the I2C, pinctrl and reset nodes for Hikey970
+
+----------------------------------------------------------------
+Mauro Carvalho Chehab (3):
+      arm64: dts: hisilicon: hi3670.dtsi: add iomcu_rst
+      arm64: dts: hisilicon: hikey970-pinctrl.dtsi: add missing pinctrl settings
+      arm64: dts: hisilicon: hi3670.dtsi: add I2C settings
+
+Zhen Lei (7):
+      arm64: dts: hisilicon: correct vendor prefix hisi to hisilicon
+      arm64: dts: hisilicon: separate each group of data in the property "ranges"
+      arm64: dts: hisilicon: place clock-names "bus" before "core"
+      arm64: dts: hisilicon: normalize the node name of the module thermal
+      arm64: dts: hisilicon: normalize the node name of the localbus
+      arm64: dts: hisilicon: avoid irrelevant nodes being mistakenly identified as PHY nodes
+      arm64: dts: hisilicon: delete unused property smmu-cb-memtype
+
+ arch/arm64/boot/dts/hisilicon/hi3660.dtsi          |  10 +-
+ arch/arm64/boot/dts/hisilicon/hi3670.dtsi          |  79 ++-
+ arch/arm64/boot/dts/hisilicon/hi3798cv200.dtsi     |   8 +-
+ arch/arm64/boot/dts/hisilicon/hi6220.dtsi          |   8 +-
+ .../arm64/boot/dts/hisilicon/hikey970-pinctrl.dtsi | 632 ++++++++++++++++++++-
+ arch/arm64/boot/dts/hisilicon/hip05.dtsi           |   2 +-
+ arch/arm64/boot/dts/hisilicon/hip06.dtsi           |   6 +-
+ arch/arm64/boot/dts/hisilicon/hip07.dtsi           |   9 +-
+ 8 files changed, 717 insertions(+), 37 deletions(-)
