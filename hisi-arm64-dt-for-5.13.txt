@@ -1,0 +1,24 @@
+The following changes since commit a38fd8748464831584a19438cbb3082b5a2dab15:
+
+  Linux 5.12-rc2 (2021-03-05 17:33:41 -0800)
+
+are available in the git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-5.13
+
+for you to fetch changes up to 3d208c8207bfaa861a783c8fed9f31438fc0bcc6:
+
+  arm64: dts: hisilicon: correct vendor prefix hisi to hisilicon (2021-04-02 15:12:52 +0800)
+
+----------------------------------------------------------------
+ARM64: DT: Hisilicon ARM64 DT updates for 5.13
+
+- Correct the vendor prefix for hi3660 and hi3670
+
+----------------------------------------------------------------
+Zhen Lei (1):
+      arm64: dts: hisilicon: correct vendor prefix hisi to hisilicon
+
+ arch/arm64/boot/dts/hisilicon/hi3660.dtsi | 4 ++--
+ arch/arm64/boot/dts/hisilicon/hi3670.dtsi | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)

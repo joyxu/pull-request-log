@@ -1,0 +1,26 @@
+The following changes since commit a38fd8748464831584a19438cbb3082b5a2dab15:
+
+  Linux 5.12-rc2 (2021-03-05 17:33:41 -0800)
+
+are available in the git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-armv7soc-for-5.13
+
+for you to fetch changes up to c1ce9d8081a9fca5fd1b2e48bcc20e5dc3387302:
+
+  ARM: hisi: use the correct HiSilicon copyright (2021-04-02 15:36:27 +0800)
+
+----------------------------------------------------------------
+HiSilicon ARMv7 SoC updates for v5.13
+
+- Correct the HiSilicon copyright
+
+----------------------------------------------------------------
+Hao Fang (1):
+      ARM: hisi: use the correct HiSilicon copyright
+
+ arch/arm/mach-hisi/hisilicon.c | 4 ++--
+ arch/arm/mach-hisi/hotplug.c   | 2 +-
+ arch/arm/mach-hisi/platmcpm.c  | 2 +-
+ arch/arm/mach-hisi/platsmp.c   | 2 +-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
