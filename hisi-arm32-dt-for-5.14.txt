@@ -1,0 +1,29 @@
+The following changes since commit 6efb943b8616ec53a5e444193dccf1af9ad627b5:
+
+  Linux 5.13-rc1 (2021-05-09 14:17:44 -0700)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm32-dt-for-5.14
+
+for you to fetch changes up to da1eab9e15ef96c10e5cadd73ebe113e7947f8f7:
+
+  ARM: dts: hisilicon: use the correct HiSilicon copyright (2021-06-17 01:53:05 +0000)
+
+----------------------------------------------------------------
+ARM: DT: HiSilicon ARM32 DT updates for 5.14
+
+- Correct the HiSilicon copyright
+
+----------------------------------------------------------------
+Hao Fang (1):
+      ARM: dts: hisilicon: use the correct HiSilicon copyright
+
+ arch/arm/boot/dts/hi3620.dtsi        | 4 ++--
+ arch/arm/boot/dts/hip01-ca9x2.dts    | 4 ++--
+ arch/arm/boot/dts/hip01.dtsi         | 4 ++--
+ arch/arm/boot/dts/hip04.dtsi         | 4 ++--
+ arch/arm/boot/dts/hisi-x5hd2-dkb.dts | 2 +-
+ arch/arm/boot/dts/hisi-x5hd2.dtsi    | 2 +-
+ arch/arm/boot/dts/sd5203.dts         | 2 +-
+ 7 files changed, 11 insertions(+), 11 deletions(-)

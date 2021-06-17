@@ -1,0 +1,37 @@
+The following changes since commit 6efb943b8616ec53a5e444193dccf1af9ad627b5:
+
+  Linux 5.13-rc1 (2021-05-09 14:17:44 -0700)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-5.14
+
+for you to fetch changes up to e3211e414d26cda43f3093fd09e5d8d0a797648f:
+
+  arm64: dts: hisilicon: use the correct HiSilicon copyright (2021-06-17 01:28:15 +0000)
+
+----------------------------------------------------------------
+ARM64: DT: HiSilicon ARM64 DT updates for 5.14
+
+- Correct the HiSilicon copyright
+
+----------------------------------------------------------------
+Hao Fang (1):
+      arm64: dts: hisilicon: use the correct HiSilicon copyright
+
+ arch/arm64/boot/dts/hisilicon/hi3660-coresight.dtsi | 2 +-
+ arch/arm64/boot/dts/hisilicon/hi3660-hikey960.dts   | 2 +-
+ arch/arm64/boot/dts/hisilicon/hi3660.dtsi           | 2 +-
+ arch/arm64/boot/dts/hisilicon/hi3670-hikey970.dts   | 2 +-
+ arch/arm64/boot/dts/hisilicon/hi3670.dtsi           | 2 +-
+ arch/arm64/boot/dts/hisilicon/hi6220-coresight.dtsi | 2 +-
+ arch/arm64/boot/dts/hisilicon/hi6220-hikey.dts      | 2 +-
+ arch/arm64/boot/dts/hisilicon/hi6220.dtsi           | 2 +-
+ arch/arm64/boot/dts/hisilicon/hip05-d02.dts         | 2 +-
+ arch/arm64/boot/dts/hisilicon/hip05.dtsi            | 2 +-
+ arch/arm64/boot/dts/hisilicon/hip06-d03.dts         | 2 +-
+ arch/arm64/boot/dts/hisilicon/hip06.dtsi            | 2 +-
+ arch/arm64/boot/dts/hisilicon/hip07-d05.dts         | 2 +-
+ arch/arm64/boot/dts/hisilicon/hip07.dtsi            | 2 +-
+ include/dt-bindings/pinctrl/hisi.h                  | 2 +-
+ 15 files changed, 15 insertions(+), 15 deletions(-)
