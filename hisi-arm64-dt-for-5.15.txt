@@ -1,0 +1,23 @@
+The following changes since commit e73f0f0ee7541171d89f2e2491130c7771ba58d3:
+
+  Linux 5.14-rc1 (2021-07-11 15:07:40 -0700)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-5.15
+
+for you to fetch changes up to 2dc30eb9241c21cbeaf5b668f4eb276278149d97:
+
+  arm64: dts: HiSilicon: hi3660: address a PCI warning (2021-08-13 08:26:49 +0000)
+
+----------------------------------------------------------------
+ARM64: DT: HiSilicon ARM64 DT updates for 5.15
+
+- Address a PCI bus range warning of the hi3660 SoC
+
+----------------------------------------------------------------
+Mauro Carvalho Chehab (1):
+      arm64: dts: HiSilicon: hi3660: address a PCI warning
+
+ arch/arm64/boot/dts/hisilicon/hi3660.dtsi | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
