@@ -1,0 +1,36 @@
+The following changes since commit 6880fa6c56601bb8ed59df6c30fd390cc5f6dd8f:
+
+  Linux 5.15-rc1 (2021-09-12 16:28:37 -0700)
+
+are available in the Git repository at:
+
+  git://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-5.16
+
+for you to fetch changes up to dcc3f56519b6e0fdc6a6c13dbdbf123425231e89:
+
+  arm64: dts: hisilicon: align operating-points table name with dtschema (2021-09-22 01:44:37 +0000)
+
+----------------------------------------------------------------
+ARM64: DT: HiSilicon ARM64 DT updates for 5.16
+
+- Add SPMI PMIC support for the Hikey970 board
+- Correct the sp805 watchdog compatible string to match the document
+- Correct the operating-points table name to match the dtschema
+
+----------------------------------------------------------------
+Krzysztof Kozlowski (1):
+      arm64: dts: hisilicon: align operating-points table name with dtschema
+
+Mauro Carvalho Chehab (1):
+      arm64: dts: hisilicon: Add support for Hikey 970 PMIC
+
+Michael Walle (1):
+      arm64: dts: hisilicon: fix arm,sp805 compatible string
+
+ arch/arm64/boot/dts/hisilicon/hi3660.dtsi         |  8 +--
+ arch/arm64/boot/dts/hisilicon/hi3670-hikey970.dts | 22 +-----
+ arch/arm64/boot/dts/hisilicon/hi3670.dtsi         |  2 +-
+ arch/arm64/boot/dts/hisilicon/hi6220.dtsi         |  4 +-
+ arch/arm64/boot/dts/hisilicon/hikey970-pmic.dtsi  | 86 +++++++++++++++++++++++
+ 5 files changed, 96 insertions(+), 26 deletions(-)
+ create mode 100644 arch/arm64/boot/dts/hisilicon/hikey970-pmic.dtsi
