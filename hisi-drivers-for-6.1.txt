@@ -1,0 +1,28 @@
+The following changes since commit 568035b01cfb107af8d2e4bd2fb9aea22cf5b868:
+
+  Linux 6.0-rc1 (2022-08-14 15:50:18 -0700)
+
+are available in the Git repository at:
+
+  https://github.com/hisilicon/linux-hisi.git tags/hisi-drivers-for-6.1
+
+for you to fetch changes up to 4678a2d352e055a186dd02613d54e30785810fb0:
+
+  bus: hisi_lpc: Use platform_device_register_full() (2022-09-08 02:27:29 +0000)
+
+----------------------------------------------------------------
+HiSilicon driver updates for 6.1:
+- some small improvements for the hisi_lpc driver
+
+----------------------------------------------------------------
+Andy Shevchenko (4):
+      bus: hisi_lpc: Don't dereference fwnode handle
+      bus: hisi_lpc: Use devm_platform_ioremap_resource
+      bus: hisi_lpc: Correct error code for timeout
+      bus: hisi_lpc: Don't guard ACPI IDs with ACPI_PTR()
+
+John Garry (1):
+      bus: hisi_lpc: Use platform_device_register_full()
+
+ drivers/bus/hisi_lpc.c | 96 +++++++++++++++++++++++---------------------------
+ 1 file changed, 44 insertions(+), 52 deletions(-)
