@@ -12,7 +12,7 @@ for you to fetch changes up to 4678a2d352e055a186dd02613d54e30785810fb0:
 
 ----------------------------------------------------------------
 HiSilicon driver updates for 6.1:
-- some small improvements for the hisi_lpc driver
+- some small improvements to the hisi_lpc driver
 
 ----------------------------------------------------------------
 Andy Shevchenko (4):
