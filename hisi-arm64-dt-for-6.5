@@ -1,0 +1,27 @@
+The following changes since commit ac9a78681b921877518763ba0e89202254349d1b:
+
+  Linux 6.4-rc1 (2023-05-07 13:34:35 -0700)
+
+are available in the Git repository at:
+
+  https://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-6.5
+
+for you to fetch changes up to eb83def346867f04464541976ac79a8867ce4abb:
+
+  arm64: dts: Unify pinctrl-single pin group nodes for hisilicon (2023-06-05 02:53:09 +0000)
+
+----------------------------------------------------------------
+ARM64: DT: HiSilicon ARM64 DT updates for v6.5
+
+- Clean up the pinctrl-single node names and correct the #size-cells of
+the pinctrl controller
+
+----------------------------------------------------------------
+Tony Lindgren (1):
+      arm64: dts: Unify pinctrl-single pin group nodes for hisilicon
+
+ arch/arm64/boot/dts/hisilicon/hi6220.dtsi          |   6 +-
+ arch/arm64/boot/dts/hisilicon/hikey-pinctrl.dtsi   | 134 ++++++++++-----------
+ .../arm64/boot/dts/hisilicon/hikey960-pinctrl.dtsi | 124 +++++++++----------
+ .../arm64/boot/dts/hisilicon/hikey970-pinctrl.dtsi | 118 +++++++++---------
+ 4 files changed, 191 insertions(+), 191 deletions(-)

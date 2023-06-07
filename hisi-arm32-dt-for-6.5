@@ -1,0 +1,25 @@
+The following changes since commit ac9a78681b921877518763ba0e89202254349d1b:
+
+  Linux 6.4-rc1 (2023-05-07 13:34:35 -0700)
+
+are available in the Git repository at:
+
+  https://github.com/hisilicon/linux-hisi.git tags/hisi-arm32-dt-for-6.5
+
+for you to fetch changes up to ddde65e380b2165085bf4943f6fa3b32196a2848:
+
+  ARM: dts: Unify pinctrl-single pin group nodes for hisilicon (2023-06-06 06:53:06 +0000)
+
+----------------------------------------------------------------
+ARM: DT: HiSilicon ARM32 DT updates for v6.5
+
+- Clean up the pinctrl-single node names and correct the pinctrl
+controller nodes of the hi3620 SoC
+
+----------------------------------------------------------------
+Tony Lindgren (1):
+      ARM: dts: Unify pinctrl-single pin group nodes for hisilicon
+
+ arch/arm/boot/dts/hi3620-hi4511.dts | 130 ++++++++++++++++++------------------
+ arch/arm/boot/dts/hi3620.dtsi       |   6 +-
+ 2 files changed, 67 insertions(+), 69 deletions(-)
