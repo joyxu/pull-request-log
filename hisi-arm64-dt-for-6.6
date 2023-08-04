@@ -1,0 +1,31 @@
+The following changes since commit 06c2afb862f9da8dc5efa4b6076a0e48c3fbaaa5:
+
+  Linux 6.5-rc1 (2023-07-09 13:53:13 -0700)
+
+are available in the Git repository at:
+
+  https://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-6.6
+
+for you to fetch changes up to dc8cbdd9c68d1e840aec926bee714c38f5e315a5:
+
+  arm64: dts: hi3798cv200: Fix clocks order of sd0 (2023-08-03 12:37:20 +0000)
+
+----------------------------------------------------------------
+ARM64: DT: HiSilicon ARM64 DT updates for v6.6
+
+- Miscellaneous fixes according the DTS coding style
+- Correct the clocks order of the sd0 for the hi3798cv200
+
+----------------------------------------------------------------
+David Yang (1):
+      arm64: dts: hi3798cv200: Fix clocks order of sd0
+
+Krzysztof Kozlowski (2):
+      arm64: dts: hisilicon: minor whitespace cleanup around '='
+      arm64: dts: hisilicon: add missing space before {
+
+ arch/arm64/boot/dts/hisilicon/hi3798cv200.dtsi |  4 ++--
+ arch/arm64/boot/dts/hisilicon/hi6220.dtsi      | 24 ++++++++++++------------
+ arch/arm64/boot/dts/hisilicon/hip06.dtsi       |  8 ++++----
+ arch/arm64/boot/dts/hisilicon/hip07.dtsi       |  8 ++++----
+ 4 files changed, 22 insertions(+), 22 deletions(-)
