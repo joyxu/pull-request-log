@@ -1,0 +1,38 @@
+The following changes since commit 06c2afb862f9da8dc5efa4b6076a0e48c3fbaaa5:
+
+  Linux 6.5-rc1 (2023-07-09 13:53:13 -0700)
+
+are available in the Git repository at:
+
+  https://github.com/hisilicon/linux-hisi.git tags/hisi-drivers-for-6.6
+
+for you to fetch changes up to b51022b416f5be113cd5345a2cab287d78e6b74c:
+
+  doc: soc: hisilicon: Add Kunpeng HCCS driver documentation (2023-08-08 12:36:31 +0000)
+
+----------------------------------------------------------------
+HiSilicon driver updates for v6.6
+
+- Add HCCS driver for HiSilicon Kunpeng SoC and
+document the sysfs atrributes description
+
+----------------------------------------------------------------
+Huisong Li (3):
+      soc: hisilicon: Support HCCS driver on Kunpeng SoC
+      soc: hisilicon: add sysfs entry to query information of HCCS
+      doc: soc: hisilicon: Add Kunpeng HCCS driver documentation
+
+ .../testing/sysfs-devices-platform-kunpeng_hccs    |   81 ++
+ MAINTAINERS                                        |    7 +
+ drivers/soc/Kconfig                                |    1 +
+ drivers/soc/Makefile                               |    1 +
+ drivers/soc/hisilicon/Kconfig                      |   20 +
+ drivers/soc/hisilicon/Makefile                     |    2 +
+ drivers/soc/hisilicon/kunpeng_hccs.c               | 1275 ++++++++++++++++++++
+ drivers/soc/hisilicon/kunpeng_hccs.h               |  191 +++
+ 8 files changed, 1578 insertions(+)
+ create mode 100644 Documentation/ABI/testing/sysfs-devices-platform-kunpeng_hccs
+ create mode 100644 drivers/soc/hisilicon/Kconfig
+ create mode 100644 drivers/soc/hisilicon/Makefile
+ create mode 100644 drivers/soc/hisilicon/kunpeng_hccs.c
+ create mode 100644 drivers/soc/hisilicon/kunpeng_hccs.h
