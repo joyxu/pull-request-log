@@ -1,0 +1,31 @@
+The following changes since commit b85ea95d086471afb4ad062012a4d73cd328fa86:
+
+  Linux 6.7-rc1 (2023-11-12 16:19:07 -0800)
+
+are available in the Git repository at:
+
+  https://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-6.8
+
+for you to fetch changes up to 94fa073377db02ef0ca391f32e11e0f4649b2657:
+
+  arm64: dts: hisilicon: hikey970-pmic: clean up SPMI node (2023-12-08 06:14:05 +0000)
+
+----------------------------------------------------------------
+ARM64: DT: HiSilicon ARM64 DT updates for v6.8
+
+- Merge the hi3620-clock binding into hisilicon,sysctrl
+- Clean up the hikey970 PMIC dtsi
+
+----------------------------------------------------------------
+Johan Hovold (2):
+      arm64: dts: hisilicon: hikey970-pmic: fix regulator cells properties
+      arm64: dts: hisilicon: hikey970-pmic: clean up SPMI node
+
+Rob Herring (1):
+      dt-bindings: hisilicon: Merge hi3620-clock into hisilicon,sysctrl binding
+
+ .../bindings/arm/hisilicon/controller/sysctrl.yaml   | 17 +++++++++++++++++
+ .../devicetree/bindings/clock/hi3620-clock.txt       | 20 --------------------
+ arch/arm64/boot/dts/hisilicon/hikey970-pmic.dtsi     |  6 +-----
+ 3 files changed, 18 insertions(+), 25 deletions(-)
+ delete mode 100644 Documentation/devicetree/bindings/clock/hi3620-clock.txt

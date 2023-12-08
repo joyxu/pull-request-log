@@ -1,0 +1,31 @@
+The following changes since commit b85ea95d086471afb4ad062012a4d73cd328fa86:
+
+  Linux 6.7-rc1 (2023-11-12 16:19:07 -0800)
+
+are available in the Git repository at:
+
+  https://github.com/hisilicon/linux-hisi.git tags/hisi-drivers-for-6.8
+
+for you to fetch changes up to be2f78a8a638e71bbbc2109bc052524143e8f42a:
+
+  soc: hisilicon: kunpeng_hccs: Support the platform with PCC type3 and interrupt ack (2023-12-07 06:16:35 +0000)
+
+----------------------------------------------------------------
+HiSilicon driver updates for v6.8
+
+- Add support for the platform with PCC type3 and interrupt ack
+- Few cleanups and improvements: correct the format of some strings and domain typo,
+add failure log
+
+----------------------------------------------------------------
+Huisong Li (5):
+      soc: hisilicon: kunpeng_hccs: Fix some incorrect format strings
+      soc: hisilicon: kunpeng_hccs: Add failure log for no _CRS method
+      soc: hisilicon: kunpeng_hccs: Remove an unused blank line
+      doc: kunpeng_hccs: Fix incorrect email domain name
+      soc: hisilicon: kunpeng_hccs: Support the platform with PCC type3 and interrupt ack
+
+ .../testing/sysfs-devices-platform-kunpeng_hccs    |   6 +-
+ drivers/soc/hisilicon/kunpeng_hccs.c               | 152 ++++++++++++++++-----
+ drivers/soc/hisilicon/kunpeng_hccs.h               |  15 ++
+ 3 files changed, 137 insertions(+), 36 deletions(-)
