@@ -1,0 +1,38 @@
+The following changes since commit 4cece764965020c22cff7665b18a012006359095:
+
+  Linux 6.9-rc1 (2024-03-24 14:10:05 -0700)
+
+are available in the Git repository at:
+
+  https://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-6.10
+
+for you to fetch changes up to 5cff1135585f5f7d88ad1bbd67ca0f519714a809:
+
+  arm64: dts: hisilicon: hi6220: correct tsensor unit addresses (2024-04-19 08:40:27 +0000)
+
+----------------------------------------------------------------
+ARM64: DT: HiSilicon ARM64 DT updates for v6.10
+
+- Move non-MMIO node out of soc for the hip05, hip06 and hip07 SoC
+- Miscellaneous fixes and improvements like correcting unit addresses and
+missing reg
+
+----------------------------------------------------------------
+Krzysztof Kozlowski (9):
+      arm64: dts: hisilicon: hip05: move non-MMIO node out of soc
+      arm64: dts: hisilicon: hip05-d02: correct local-bus unit addresses
+      arm64: dts: hisilicon: hip06: move non-MMIO node out of soc
+      arm64: dts: hisilicon: hip06: correct unit addresses
+      arm64: dts: hisilicon: hip07: move non-MMIO node out of soc
+      arm64: dts: hisilicon: hip07: correct unit addresses
+      arm64: dts: hisilicon: hi6220-hikey: add missing port@0 reg
+      arm64: dts: hisilicon: hi6220-hikey: drop unit addresses from fixed regulators
+      arm64: dts: hisilicon: hi6220: correct tsensor unit addresses
+
+ arch/arm64/boot/dts/hisilicon/hi6220-hikey.dts |  7 +-
+ arch/arm64/boot/dts/hisilicon/hi6220.dtsi      |  2 +-
+ arch/arm64/boot/dts/hisilicon/hip05-d02.dts    |  4 +-
+ arch/arm64/boot/dts/hisilicon/hip05.dtsi       | 12 ++--
+ arch/arm64/boot/dts/hisilicon/hip06.dtsi       | 88 +++++++++++++-------------
+ arch/arm64/boot/dts/hisilicon/hip07.dtsi       | 84 ++++++++++++------------
+ 6 files changed, 99 insertions(+), 98 deletions(-)
