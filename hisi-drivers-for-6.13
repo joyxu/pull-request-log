@@ -1,0 +1,34 @@
+The following changes since commit 9852d85ec9d492ebef56dc5f229416c925758edc:
+
+  Linux 6.12-rc1 (2024-09-29 15:06:19 -0700)
+
+are available in the Git repository at:
+
+  https://github.com/hisilicon/linux-hisi.git tags/hisi-drivers-for-6.13
+
+for you to fetch changes up to e3c289c0916e2a3d7859a0cf851ea242fa23ec1e:
+
+  soc: hisilicon: kunpeng_hccs: Support low power feature for the specified HCCS type (2024-10-14 08:54:51 +0000)
+
+----------------------------------------------------------------
+HiSilicon driver updates for v6.13
+
+- Add the sysfs to show all HCCS types used on the platform
+- Add the low power feature for HCCS by adjusting the lane number
+- Few cleanups and improvements: correct a PCC typo, verify the die, port
+information, base address and size, update the lane_mode to max_lane_num
+
+----------------------------------------------------------------
+Huisong Li (6):
+      soc: hisilicon: kunpeng_hccs: Fix a PCC typo
+      soc: hisilicon: kunpeng_hccs: Return failure on having not die or port information
+      soc: hisilicon: kunpeng_hccs: Add the check for base address and size of shared memory
+      soc: hisilicon: kunpeng_hccs: Fix the 'lane_mode' field name in port info structure to 'max_lane_num'
+      soc: hisilicon: kunpeng_hccs: Add used HCCS types sysfs
+      soc: hisilicon: kunpeng_hccs: Support low power feature for the specified HCCS type
+
+ .../testing/sysfs-devices-platform-kunpeng_hccs    |  45 ++
+ drivers/soc/hisilicon/Kconfig                      |   7 +-
+ drivers/soc/hisilicon/kunpeng_hccs.c               | 514 ++++++++++++++++++++-
+ drivers/soc/hisilicon/kunpeng_hccs.h               |  33 +-
+ 4 files changed, 580 insertions(+), 19 deletions(-)
