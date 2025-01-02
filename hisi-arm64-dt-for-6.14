@@ -1,0 +1,23 @@
+The following changes since commit 40384c840ea1944d7c5a392e8975ed088ecf0b37:
+
+  Linux 6.13-rc1 (2024-12-01 14:28:56 -0800)
+
+are available in the Git repository at:
+
+  https://github.com/hisilicon/linux-hisi.git tags/hisi-arm64-dt-for-6.14
+
+for you to fetch changes up to 4a45f8c502a8b8a836c3c932a18d538856097ac7:
+
+  arm64: dts: hisilicon: Remove unused and undocumented "enable-dma" and "bus-id" properties (2024-12-17 12:03:08 +0000)
+
+----------------------------------------------------------------
+ARM64: DT: HiSilicon ARM64 DT updates for v6.14
+
+- Remove "enable-dma" and "bus-id" properties from the spi node on hi6220
+
+----------------------------------------------------------------
+Rob Herring (Arm) (1):
+      arm64: dts: hisilicon: Remove unused and undocumented "enable-dma" and "bus-id" properties
+
+ arch/arm64/boot/dts/hisilicon/hi6220.dtsi | 2 --
+ 1 file changed, 2 deletions(-)
