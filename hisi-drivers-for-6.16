@@ -1,0 +1,24 @@
+The following changes since commit 0af2f6be1b4281385b618cb86ad946eded089ac8:
+
+  Linux 6.15-rc1 (2025-04-06 13:11:33 -0700)
+
+are available in the Git repository at:
+
+  https://github.com/hisilicon/linux-hisi.git tags/hisi-drivers-for-6.16
+
+for you to fetch changes up to 49da9105781d99db3650c5e9a0d58ed9526d07c7:
+
+  soc: hisilicon: kunpeng_hccs: Simplify PCC shared memory region handling (2025-04-21 12:00:27 +0000)
+
+----------------------------------------------------------------
+HiSilicon driver updates for v6.16
+
+- Simplify PCC shared memory region handling in HCCS driver
+
+----------------------------------------------------------------
+Sudeep Holla (1):
+      soc: hisilicon: kunpeng_hccs: Simplify PCC shared memory region handling
+
+ drivers/soc/hisilicon/kunpeng_hccs.c | 42 +++++++++++++-----------------------
+ drivers/soc/hisilicon/kunpeng_hccs.h |  2 --
+ 2 files changed, 15 insertions(+), 29 deletions(-)
